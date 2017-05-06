@@ -1,0 +1,28 @@
+ <% include yourStoryData %> 
+
+
+<% if(path == "profileData"){ %>
+ 	<%  include profileData %>
+ <% }else if(path == "myStoryData"){ %>
+ 	 <% include myStoryData %>
+ <%  } else if(path == "accountData"){  %>
+ 	  <% include accountData %>
+ <% }else if(path == "reportsData"){ %>
+ 	 <% include reportsData %>
+<% } else { %>
+<% include profileData %>
+<% } %>
+
+</div>
+</div>
+
+<!--Custom Js links -->
+        
+  <script src="javascripts/TweenMax.min.js"></script>
+<script src="javascripts/TextPlugin.min.js"></script>
+     
+    <script src="javascripts/control.js" type="text/javascript"></script>
+	<script>
+	</script>
+</body>
+</html>

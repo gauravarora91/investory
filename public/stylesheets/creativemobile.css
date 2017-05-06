@@ -1,0 +1,1523 @@
+html { height: 100% }
+body{
+        height: 100%;
+        overflow-y: auto;
+        padding: 0
+}
+.frogIndex
+{
+        position: relative;
+    top: inherit;
+
+}
+.navbar-header a { display: block; padding: 15px 0 }
+nav.navbar.navbar-inverse.mobileHeader
+{
+/*    position: fixed;*/
+    width: 100%;   
+    margin-bottom: 0;
+}
+body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
+    position: inherit;
+}
+.container-fluid {
+       height: 100%;
+}
+
+.logo-icon, .logo-icon-blue {
+    left: 90px;
+    position: absolute;
+    top: 8px;
+    width: 17px;
+}
+
+div.navbar.navbar-inverse.mobileHeader{
+    background-color: transparent;
+}
+.navbar-inverse {
+    background-color: white;
+    border-color: white;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #333333;
+    height: 3px;
+    border-radius: 3px;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #ffffff;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+    margin-left: 0;
+    border: none;
+    margin-right: 0;
+    background: #fff
+}
+.navbar .navbar-nav {
+    display: block;
+    float: none;
+    vertical-align: top;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #333333;
+    font-weight: 800;
+    padding: 0em;
+    font-size: 18px
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color:#35BFD3;
+    background-color: transparent;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: transparent;
+}
+
+div.yourMoodParent{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 65px);
+    /*margin-top: 65px;*/
+}
+div.index2{
+/*    height: calc(100% - 65px);ruthu6*/
+}
+.yourMood > h1 {
+     font-size: large;
+     font-weight: 300;
+     margin-top: 0; 
+}
+.yourMood > h4 {
+font-size: medium;
+}
+.yourMood > p {
+        font-size: small;
+  }
+.yourMood {
+margin-top:auto;
+    top: 35%;
+    position: relative;
+    transform: translateY(-50%);
+    top: 35%;
+}
+
+/*frog image*/
+.frogImageMoods > img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.frogImageMoods {
+    position: initial;
+    z-index: 1035;
+    top: inherit;
+    left: inherit;
+    width: initial;
+    height: initial;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+.frogImageMoods h1 {
+    font-family: mermaid;
+    position: absolute;
+    text-align: center;
+    vertical-align: top;
+    left: initial;
+    top: initial;
+    color: white;
+    font-weight: 900;
+    font-size: large;
+    width: 100%;
+/*
+    
+   
+*/
+}
+
+h1#setMoodText{
+    font-family: mermaid;
+    position: absolute;
+    text-align: center;
+    vertical-align: top;
+    left: initial;
+    top: initial;
+    color: white;
+    font-weight: 900;
+    font-size: large;
+    width: 100%;
+    top: 44%;
+    font-size: xx-large; 
+    display: none;
+}
+h2.indexheader,h2.whatWeOffer,h2.indexheader3
+{
+        font-weight: 600;
+    color: #35BFD3;
+
+
+}
+h2.indexheader {
+    border-top: 3px #35BFD3 dotted;
+    font-size: 1.6em;
+    margin: 0;
+    padding: 25px 0 15px;
+
+}
+
+h2.indexheader3
+{
+/*        border-bottom: 3px #35BFD3 dotted;*/
+    font-size: 1.85em;
+}
+
+/*
+.getStarted{
+        width: 7em;
+}
+*/
+button.btn.btn-lg.moodNav.getStarted{
+    width: auto;
+}
+div.photosParent {
+    left: 0%;
+    right: 0%;
+    position: absolute;
+    bottom: 50px;
+}
+
+
+/*know us page*/
+.knowUs1{
+    
+}
+.know-us h2 {
+       font-weight: 600;
+      font-size: 1.5em;
+}
+.know-us .dotHr {
+    margin:auto;
+}
+
+.content div > p {
+    font-weight: 700;
+       font-size: 0.71em;
+    line-height: 1.6;
+   }
+.how-it-works .pagination>li>div, .how-it-works .dotHr div, .why-us .dotHr div, .what-we-offer .dotHr div, .page4 .dotHr div, .page2 .dotHr div, .page5 .dotHr div, .page6 .dotHr div
+ #reports .dotHr div, #myStory .dotHr div, #profile .dotHr div, .know-us .dotHr div {
+    float: left;
+    background: #ffffff;
+    border: 0.005px dotted #35BFD3;
+    border-radius: 0%;
+    margin-top: 5px;
+    margin-left: 1px;
+    margin-right: 3px;
+}
+p.KuWfC1Pad
+{
+       font-weight: 700;
+    font-size: 0.85em;/*ruthu6*/
+    line-height: 1.6;
+    text-align: justify;
+}
+p.WhoWeAreP
+{ font-weight: 700;
+       line-height: 1.6;
+    text-align: justify;
+        font-size: 0.75em;/*ruthu6*/
+}
+.content div > p {
+    font-weight: 700;
+      font-size: 0.85em;/*ruthu6*/
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/*index section2*/
+
+
+.whatWeOffer{
+        font-size: 1.25em;
+}
+
+#sectionIndex2 div#myCarousel.carousel.slide.text-center.carouselEdit {
+   position: relative;
+    width: 85%;
+    left: 0em;
+    margin: auto;
+}
+/*div#myCarousel.carousel.slide.text-center.carouselEdit {
+   position: relative;
+    width: 85%;
+    left: 0em;
+    margin: auto;
+}*/
+a.left {
+    position: relative;
+    left: -45%;
+         top: -8em;
+}
+a.right {
+    right: -45%;
+    position: relative;
+       top: -8em;
+}
+.slider-control{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+}
+
+.slider-control .left {
+    float: Left;
+    position: static;
+}
+
+.slider-control .right {
+    float: right;
+    position: static;
+}
+
+#Responsible,p#Changing Season,#Broke,#Rich,#Loved,#Nerdy,#Responsible,#Social
+{
+    color: #333;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 2%;
+    margin: 0 8px;
+/*
+  margin-left: 0.75em;
+    margin-right: 0.25em;
+*/
+
+}
+#sectionIndex2 div.carousel-inner {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+div.mobileWhatWeOffer{
+/*       border-bottom: 3px #35BFD3 dotted; */
+}
+
+.offer{
+    width:100%;
+    height:100%
+}
+/*button#indexScriptYourStory.btn.btn-lg.moodNav.story {
+    width: 53%;
+}*/
+/*index section3*/
+.PAN {
+    top: 0%;
+    position: relative;
+    left: 0%;
+}
+
+.PAN > img,.Package > img,.Withdraw img {
+   
+    width: 50%;
+    height: 50%;
+    left: 0%;
+
+}
+.investing {
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+.Withdraw {
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
+a#index4.left,a#index4.right
+    {
+ 
+    top: -6em;
+}
+ div.carousel-inner {
+    position: relative;
+    width: calc(100% - 70px);
+    font-weight: bolder;
+    margin: auto;
+    overflow: hidden;
+    height: 12em;
+}
+ div#index4 div.carousel-inner {
+      position: relative;
+      width: 100%;
+
+    font-weight: bolder;
+    margin: auto;
+    overflow: hidden;
+         font-size: 1.32em;
+}
+.avatarTestimonial .name {
+    font-size: 0.8em;
+    font-weight: 700;
+    margin: inherit;
+}
+.item h4 {
+      font-size: 0.65em;
+    font-weight: 700;
+    margin-top: 0;
+}
+.newsletter > p {
+    width: initial;
+   }
+.avatarTestimonial img {
+    padding: 0;
+    margin: 0;
+    height: 31px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+/*div.index4{
+           height: 91%;
+}*/
+/*div.index3
+{
+           height: 155%;
+    border-bottom: 3px #35BFD3 dotted;
+}*/
+.footerFrog > img {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.rowIndexSlider .slider {
+    position: relative;
+    top: inherit;
+    left: 0;
+}
+.rowIndexSlider .photos {
+    height: 60px;
+    width: 225px;
+    margin: 0 auto;
+}
+.rowIndexSlider .photosInner {
+    height: 60px;
+
+}
+.rowIndexSlider .photosInner {
+    position: relative;
+    z-index: 999;
+}
+img.change {
+        width: 12%;
+}
+.photos {
+/*        width: 17em;*/
+       width: 71%;
+/*    width:51%;*/
+    overflow: hidden;
+}
+
+/*pricing*/
+.frNow > .row {
+    padding-left: initial;
+    padding-right: initial;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.how-it-works .content div > p {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+div.row.howItWorksRow {
+    margin-top: auto;
+}
+.what-we-offer h2, .how-it-works h2, .know-us h2, .why-us > h2 {
+    padding: initial;
+    font-weight: 600;
+    color: #35BFD3;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: large;
+    width: initial;
+     padding-bottom: 11px;border-bottom: 3px #35BFD3 dotted;
+}
+a#pricingCarousel.left{
+       position: relative;
+    left: -46%;
+    top: -3em; 
+}
+a#pricingCarousel.right {
+    right: -46%;
+    position: relative;
+    top: -3em;
+}
+
+.pricingPanelRow {
+    padding-left: initial;
+    padding-right: initial;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*
+ul#Gp,ul#Bp{
+    padding-left: 10%;
+}
+li#Gp1,li#Gp2,li#Gp3,li#Gp4,li#bp1,li#bp2,li#bp3
+{
+        font-size: 1.05em;
+    font-weight: 700;
+    color: #333333;
+    text-align: left;
+}
+*/
+.how-it-works .panel {
+    border: 2px solid #35BFD3;
+    border-radius: 10px;
+}
+
+.how-it-works .panel-heading h2 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: #F2F5FB;
+    font-size: 1.2em;
+}
+.how-it-works .panel-heading {
+    background-color: #35BFD3;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+#pricingDot {
+    top: 17px;
+    left: 65%;
+    position: absolute;
+    /* left: 45%; */
+    bottom: 12.5em;
+    width: 100px;
+}
+.pDot {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 100%;
+    border: 2px #F2F5FB solid;
+    background-color: #FFDE15;
+    margin-right: 4px;
+    margin-bottom: 5px;
+}
+.how-it-works .panel-body h2 {
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 2em;
+}
+.how-it-works .panel-body ul {
+    padding-left: 15px;
+    color: #333333;
+    font-size: 1em;
+    font-weight: 600;
+}
+.how-it-works .panel-body ul li {
+    text-align: left;
+}
+.how-it-works .panel-body {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding-top: 7px;
+    height: 14em;
+    border-radius: 10px;
+}
+
+p.shrinkpara
+{
+        font-size: 1em;
+}
+
+
+.how-it-works a.tooltips span {
+    z-index: 10;
+    display: none;
+    padding: 10px 10px;/*ruthu6*/
+/* removed ruthu6
+    margin-top: -8%;
+    margin-left: -52%;
+*/
+    margin:auto;
+    width: auto;/*ruthu6*/
+    line-height: 18px;
+    padding-right: 5px;
+    text-align: left;
+}
+p
+{
+    font-size: inherit;
+    text-align: center;
+        font-weight: 700;
+}
+
+.below {
+    position: relative;
+    right: initial;
+    height: initial;
+}
+
+.below > .goal {
+    float: none;
+    margin-right: auto;
+    text-align: center;
+}
+div.container-fluid.moods.text-center
+{
+    padding: initial;
+}
+
+.below .goal img {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+}
+
+#mobilePage2 p
+{
+        font-size: large;
+    font-weight: 700;
+}
+
+.blankInput[type=number] {
+    width: 80px;
+    border-bottom: 1px dashed;
+    box-shadow: none;
+    padding: 0 5px;
+    margin: 0 10px;
+}
+
+.page3 .table>thead>tr>th {
+      border-right: none;
+   }
+.page3 .table {
+    width: initial;
+}
+
+.page3 .table {
+    width: 90%;
+    /* padding: 5%; */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.page3 .table>thead>tr>th {
+    border-right: none;
+    text-align: center;
+}
+p#invest{
+    color:#35BFD3;
+}
+
+button#Conservative,
+button#Moderate,
+button#Aggressive,
+button#dontKnow
+{
+    width: initial;
+    /*color:#333333;
+    border-color: #333333;*/
+}
+
+button#Conservative:hover,
+button#Moderate:hover,
+button#Aggressive:hover,
+button#dontKnow:hover{
+     color: #35BFD3;
+        border-color: #35BFD3;
+}
+
+#c,#m,#a,#d{
+    color:#333333;
+    font-weight: 700;
+    font-size: small;
+}
+
+p#mood{
+        text-align: left;
+    margin-left: 11%;
+    /* font-size: 1.1em; */
+    font-weight: 900;
+    list-style-type: circle;
+    line-height: 1;
+    text-align: left;
+    padding: 0;
+    cursor: pointer;
+    font-size: smaller;
+}
+
+label {
+       display: inline-flex;
+    max-width: initial;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-align: -webkit-left;
+        width: 95%;
+}
+
+p.circleRisk {
+       width: 10%;
+     height: 10%;
+
+    text-align: center;
+    padding: 6px 0;
+    font-weight: 700;
+    line-height: 1;
+    border-radius: 15px;
+    border-color: #35BFD3;
+    color: #35BFD3;
+    font-size: 1.2em;
+    background-color: #F2F5FB;
+}
+input[type='radio'] {
+    -webkit-appearance: none;
+    display: inline-block;
+    margin-right: 0.5em;
+    width: 0.75em;
+    height: 0.75em;
+    border: 2px #35BFD3 solid;
+    border-radius: 100%;
+    outline: none;
+    box-shadow: 0 0 0px 0px #35BFD3 inset;
+}
+.below #mood {
+
+    margin: auto;
+}
+.page5 .table, .page6 .table {
+    border: 1px solid #35BFD3;
+    border-radius: 10px;
+    border-collapse: separate;
+    width: initial;
+    width: 80%;
+    margin: auto;
+}
+
+/*login*/
+.modal .btn-lg {
+    padding: 4px 10px;
+    margin-bottom: 0.5em;
+    width: 100%;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+div.goal{
+/*    width: 50%*/
+}
+
+
+h2.story
+{
+        padding: 0.5em;
+    font-weight: 600;
+    color: #35BFD3;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#myProgress {
+    float: inherit;
+    position: relative;
+    /* margin: 1em; */
+    /* margin-right: auto; */
+    width: 100%;
+    height: 15px;
+    top: 0em;
+    background-color: #35BFD3;
+    border-radius: 10px;
+    margin: auto;
+}
+#tar1 p, #tar2 p {
+    position: relative;
+    float: left;
+    color: #35BFD3;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+#tar1 p, #tar2 p {
+    position: relative;
+    float: left;
+    color: #35BFD3;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+em{
+    color:#35BFD3;
+    font-weight: 700;
+    margin: auto;
+}
+img#f1{
+    width: 50%;
+    height: 50%;
+}
+.avatarTestimonial {
+    padding: 0;
+    height: auto;
+    width: auto;
+}
+
+/*reports*/
+
+
+p.paragraph {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bolder;
+    font-size: 15px;
+}
+h4.headFive {
+    margin-bottom: -0.5em;
+    color: #35BFD3;
+    font-weight: 600;
+    margin-top: 0.2em;
+}
+
+#reports div.text-center {
+    align-content: center;
+    height: 2.5em;
+    margin-top: 0px;
+}
+h2.stylingH {
+    margin-right: auto;
+    padding-top: initial;
+    padding-bottom: initial;
+    color: #35BFD3;
+    margin-top: auto;
+}
+.heddingFour {
+    color: #35BFD3;
+    font-weight: 800;
+}
+h4.headFive {
+    margin-bottom: 0.5em;
+    color: #35BFD3;
+    font-weight: 600;
+}
+button#menu1.btn.btn.btn-primary.dropdown-toggle.selectReport {
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #333333;
+    border-radius: 10px;
+    height: 2em;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-weight: 900;
+}
+.stylingP {
+    font-size: 0.38em;
+    font-weight: 900;
+    color: #35BFD3;
+    padding-top: 0.5%;
+    padding-left: 0.25%;
+    margin-top: 0em;
+}
+
+#reports .upgrade {
+        float: none;
+    width: auto;
+    position: relative;
+    top: -0.5em;
+    left: 0em;
+}
+
+
+#reports  .panel-body {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding-top: 7px;
+       height: inherit;
+    border-radius: 10px;
+}
+#reports h4.paint {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: #35BFD3;
+    font-weight: 800;
+        font-size: 1.5em;
+}
+#reports .classy {
+    font-weight: 800;
+    color: black;
+        font-size: 1.2em;
+}
+#reports #myProgress {
+        margin-bottom: auto;
+}
+#reports img{
+    width:auto;
+    height:auto;
+}
+
+#reports .btn .caret {
+    margin-left: auto;
+}
+
+/*invoices*/
+
+#invoices .page31 div.table-responsive {
+       margin: auto;
+    padding: initial;
+    padding-right: initial;
+    margin-top: auto;
+    width: initial;
+}
+
+ #invoices table.table.table1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-width: 1px;
+    border-bottom-width: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+        width: 100%;
+}
+ #invoices .page31 .table {
+       border: 1px solid #35BFD3;
+    border-collapse: separate;
+      content: fixed;
+    margin: auto;
+    padding: initial;
+        width: 100%;
+}
+
+#invoices .page31 .table>thead>tr>th {
+    border-top: 0;
+  
+    border-bottom: 1px solid #35BFD3;
+    font-size: 1em;
+    font-weight: 800;
+    text-align: center;
+    color: #333;
+}
+#invoices table.table.table2 {
+    border-top-width: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+        width: 100%;
+}
+#invoices .scrollbar {
+    width: 77em;
+    height: 17.4em;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-top: 0em;
+}
+#invoices .page31 .table>tbody>tr>td {
+    border-top: 0;
+    border-right: 1px solid #35BFD3;
+    width: auto;
+    font-size: 1em;
+    font-weight: 900;
+}
+table.table.table2 tr > td:nth-child(1) {
+    width: 10.8em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/*settings*/
+.settingsForm {
+    margin-left: auto;
+}
+#settings div.col-sm-6.accSettings {
+    left: 7em;
+    font-weight: bolder;
+}
+
+.settingsForm .col-sm-6 {
+    width: 40%;
+    padding: 0;
+}
+
+.settingsForm .col-md-3, .settingsForm .col-md-2 {
+    padding-left: 0;
+}
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0px;
+}
+.form-controler {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #35BFD3;
+    border-spacing: 1em;
+    font-size: 1em;
+    font-weight: 900;
+    /* height: 26px; */
+    width: 100%;
+    /* padding-bottom: 0px; */
+    /* padding-top: 0px; */
+    margin-bottom: 0.5em;
+    /* padding-right: 0px; */
+    padding: 0.3em;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+h6.messageProfile {
+    width: 15em;
+    margin-top: 0px;
+    margin-bottom: 0.65em;
+    font-weight: 800;
+}
+.settingsForm .col-sm-6.accSettings2 {
+    width: 100%;
+    padding: 0;
+    position: relative;
+    left: 0%;
+}
+
+.settingsForm .col-sm-6 {
+      width: initial;
+    padding: 0;
+}
+#settings div.col-sm-6 .accSettingsCol2 {
+    right: 2em;
+    top: 0em;
+    font-weight: bolder;
+    left: -1em;
+        width: auto;
+}
+
+.form-horizontal .control-label {
+    padding-top: 0.2em;
+    margin-bottom: 0;
+    text-align: left;
+    color: #35BFD3;
+    font-weight: 900;
+        width: initial;
+}
+
+
+#invoices th.thead1,
+#invoices th.thead2{
+    text-align: center;    border-right: 0px;
+}
+
+h3.myInvoicesHeadding{
+        color: #35BFD3;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+img#investory.img-responsive{
+    width: 140px;
+}
+.froggie {
+    width: initial;
+}
+.rowFrogs {
+    width: 100%;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.how-it-works > .row {
+    margin-top: auto;
+}
+
+.rowTransform {
+    padding-left: initial;
+    padding-right: initial;
+    padding-top: initial;
+}
+/*profile*/
+
+textarea#comment.form-controler.addressSection2 {
+    position: static;
+    left: 35%;
+}
+
+button.btn.btn-lg.moodNav.profileSubmit,
+button.btn.btn-lg.moodNav.profileSubmit2{
+    width: auto;
+}
+
+/*faqs
+.sliderFaqs {
+    position: relative;
+    left: -1em;
+    width: 100%;
+    top: 1em;
+    height: 14em;
+    overflow-y: scroll;
+    margin: auto;
+}
+.sliderFaqs button.accordion {
+    color: #35BFD3;
+    cursor: pointer;
+    padding: 2px;
+    width: 100%;
+    border: none;
+    text-align: justify;
+    outline: none;
+    font-size: 1.1em;
+    transition: 0.4s;
+    background-color: #ffffff;
+    padding-right: 0;
+    font-weight: 600;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-weight: 700;
+    line-height: 1;
+    border-radius: 15px;
+    border-color: #35BFD3;
+    color: #35BFD3;
+    font-size: 1.2em;
+    background-color: #F2F5FB;
+}
+.sliderFaqs button.accordion .col-sm-11 {
+    padding-right: 0;
+    font-size: 18px;
+}
+.sliderFaqs div.panel {
+    padding: 5px;
+    margin-bottom: 0;
+    max-height: 0;
+    text-align: left;
+    font-size: 1.1em;
+    margin-left: 2.5em;
+    background-color: #ffffff;
+    font-weight: 600;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+.sliderFaqs div.panel {
+    padding: 5px;
+    margin-bottom: 0;
+    max-height: 0;
+    text-align: left;
+    font-size: 1.1em;
+    margin-left: 2.5em;
+    background-color: #ffffff;
+    font-weight: 600;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+.faqs {
+    padding-top: initial;
+}*/
+
+.sliderFaqs {
+   position: relative;
+    left: initial;
+    width: initial;
+    top: initial;
+    height: auto;
+    overflow-y: scroll;
+}
+
+.sliderFaqs button.accordion {
+  
+    color: #35BFD3;
+    cursor: pointer;
+    padding: 2px;
+    width: initial;
+    border: none;
+    text-align: justify;
+    outline: none;
+    font-size:1.1em;
+    transition: 0.4s;
+    background-color: #ffffff;
+    padding-right: 0;
+    font-weight: 600;
+
+}
+
+.sliderFaqs button.accordion .col-sm-11 {
+        padding-right: 0;
+    padding-left: 2em;/*ruthu6*/
+    width: 100%;
+      font-size: medium;/*ruthu6*/
+    font-weight: 700;
+}
+
+.sliderFaqs button.accordion.active, button.accordion:hover {
+   color: #333;
+}
+
+.sliderFaqs div.panel {
+        text-align: start;
+    font-size: 1.1em;
+    padding: 5px;
+    margin-bottom: 0;
+    max-height: 0;
+        margin-left: auto;
+    background-color: #ffffff;
+    font-weight: 600;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+.sliderFaqs div.panel.show {
+    opacity: 1;
+    max-height: inherit;/*ruthu6*/
+}
+
+.btn-circle {
+     width: 22px;
+    height: 25px;
+    text-align: center;
+    padding: 2px 0;
+   font-weight: 700;
+  line-height: 1;
+  border-radius: 15px;
+     border-color: #35BFD3;
+     color: #35BFD3;
+    font-size: 1.2em;
+      background-color: #ffffff;
+}
+.faqs {
+    padding-top: initial;
+}
+button.accordion.btn-lg.investementbutton
+{
+          background-color: #35BFD3;
+    border: 1px #ffffff solid;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 54%;
+    padding: 6px;
+    text-align: center;
+}
+button.accordion.btn-lg.investementbutton.active{
+ background-color:#ffffff;
+    color: #35BFD3;
+    border:1px  #35BFD3 solid;
+}
+div.avatarTestimonial.avtarEdit {
+    margin-right: auto;
+}
+.content div > h2 {
+       border: none;
+}
+
+.foot {
+    padding-top: 25px;
+    border-radius: 0;
+}
+footer .foot {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+div.buttonSetUp{
+    position: relative;
+}
+
+.contentMood h2 {
+    text-align: center;
+
+}
+.contentMood .page1> p, .contentMood .page2> p, .contentMood .page3> p, .contentMood .page4> p, .contentMood .page5> p, .contentMood .page6> p {
+     text-align: center;
+}
+div#riskHeight{
+    overflow-y: scroll;
+    height: 8em;
+    padding-top: 5px;
+}
+
+.table-responsive {
+    border: none;
+}
+div.includeCarousel
+{
+        height: 190px;/*ruthu6*/
+    border-bottom: 2px #35BFD3 dotted;/*ruthu6*/
+
+}
+
+div.footerFrog{
+    top: 2.5em;
+    position: relative;
+}
+
+#section1 div.rowIndexSlider {
+    position: fixed;
+    bottom: 0%;
+}
+
+/*trial */
+
+.frogImage {
+    position: absolute;
+    z-index: 1030;
+    top: initial;
+    left: initial;
+    width: initial;
+    height: initial;
+    margin-top: 0;
+    margin-left: auto;
+    display: none;
+    right: initial;
+}
+
+/*navbar*/
+.navbar-toggle > span {
+    height: 3px;
+    border-radius: 20%;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 3px;
+}
+.navbar-default {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.mobileHeader {
+    border: 0;
+}
+.mobileHeader .navbar-header {
+    float: none;
+}
+.mobileHeader .navbar-nav>li {
+    float: none;
+    position: relative;
+    display: block;
+    text-align: left;
+    padding-left: 40%;
+    height: 35px;/*ruthu6*/
+}
+.mobileHeader .navbar-toggle {
+    margin-right: 5px;
+    margin-top: 6px;
+}
+
+.mobileHeader .navbar-default {
+    background: #fff;
+}
+
+.moodNav {
+    display: block;
+    margin: 0 auto;
+}
+.navbar-default {
+   background-color: #fff;
+}
+
+/*.mobileHeader .collapse {
+    display: none!important;
+}*/
+
+.mobileHeader .collapse.in {
+    display: block!important;
+}
+
+.mobileHeader .navbar-toggle {
+    display: block;
+    float: right;
+    margin-top: 15px;
+    margin-right: -5px
+}
+
+.mobileHeader .logoImage {
+    display: block;
+    position: relative;
+    margin: 15px;
+    float: left;
+}
+
+/*Carousel*/
+.carousel-inner .item img {
+    margin: 0 0 5px!important;
+}
+.carousel-inner .item p {
+    font-size: 16px!important;/*ruthu6*/
+    font-weight: 600;/*ruthu6*/
+}
+
+/* dotHR */
+.dotHr.longDotUs.mobile {
+    border-top: 3px #35BFD3 dotted;
+    margin-top: 25px;
+    width: 100%;
+    overflow: visible;
+}
+
+/* index 3 */
+index3 img {
+    position: static;
+    margin-top: 25px;
+}
+
+.index3 img {
+    position: static;
+    margin-top: 25px;
+}
+
+/* index 4 */
+.index4 .includeCarousel h2 {
+    font-size: 1.5em;
+        font-weight: 700;/*ruthu6*/
+}
+#myCarousel { margin: 25px 0 0 }
+#myCarousel.testimonial p {
+    font-weight: 600px;
+    font-size: 16px;
+}
+
+#myCarousel.testimonial h4 {
+    font-size: 12px;
+    font-weight: 300;
+}
+#myCarousel.testimonial div.carousel-inner {
+    width: 100%;
+    height: 140px;
+}
+.faqTour h2{
+    border-bottom: 1px dotted;
+    font-weight: 600;
+    font-size: 28px;
+}
+/* Profile Page */
+.profilePage {
+    margin-top: 65px;
+}
+
+.profilePage .container-fluid.how-it-works.contentEdit {
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.profilePage .label {
+    margin-top: 3px;
+}
+
+.profilePage .form-group {
+    margin-top: 10px;
+}
+
+.profilePage button.btn.btn-lg.moodNav.profileSubmit, .profilePage button.btn.btn-lg.moodNav.profileSubmit2 {
+    height: 32px;
+    line-height: 30px;
+    background: #35BFD3;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    margin: 25px 0 10px;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+}
+
+.container-fluid.know-us, .container-fluid.how-it-works, .container-fluid.moods.text-center {
+    margin-top: 65px;
+}
+
+.row.howItWorksRow > div {
+    margin-bottom: 30px;
+}
+
+#yourMoodP .mood .myMood {
+    display: none;
+    position: relative
+}
+#yourMoodP .mood .myMood.active {
+    display: block;
+    width: 100%;
+    padding-top: 25px;
+}
+#yourMoodP .mood .myMood img { width: 90%; max-width: 400px }
+#yourMoodP .mood .myMood p { position: absolute;
+top: 50%;/*ruthu6*/
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 2em;/*ruthu6*/
+}
+.yourMood h1, .yourMood h4, .yourMood p { font-weight: 500 }
+.row.howItWorksRow .column-sm-4 img { width: initial }
+.row.howItWorksRow .column-sm-4 p { font-size: 18px }
+
+/*ruthu6*/
+footer .newsletter > p {
+    width: initial;/*footer Script your story*/
+    
+}
+.foot h4, .foot p {
+    margin: 10px auto;/*footer content*/
+}
+div.panel p{
+    text-align: justify;
+}
+.modal-content.EmailForm {
+    padding: initial;
+   
+    top: initial;
+    height: initial;
+    width: initial;
+}
+h6.InvestTeamP {/*know us last paragraph*/
+     font-size: 0.85em;
+    text-align: justify;
+}
+
+/*sohan - Navbar cancel button animation*/
+
+
+.closebtn {
+	padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.pageGoalSelection .slider {
+    position: static;
+}
+.contentMood .page2 .login-btn { position: static }
+.contentMood .page2 button { margin: 0 auto; float: none; margin: 35px 25px 0; display: inline-block }
+#myCarousel label { width: 100% }
+#myCarousel label p { margin-right: 10px; background: #fff }
+.sub-page4 #myCarousel div.carousel-inner { width: 100%; height: 200px }
+.sub-page4 { margin-top: 40px }
+.modal { top: 0 }
+.modal-content { padding: 0 }
+.bg-success { background-color: #dff0d8; padding: 15px 4px 1px; border-radius: 5px }
+#myStory .panel { border: 0; position: static; width: 100%; box-shadow: none }
+#myStory .panel-body { padding: 0; margin: 0; width: 100% }
+.froggie { width: 25% }

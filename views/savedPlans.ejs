@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include partials/head %>
+    <link rel="stylesheet" href="stylesheets/updated.css">
+    <link rel="stylesheet" href="stylesheets/responsive.css">
+    <link rel="stylesheet" href="stylesheets/responsive2560.css" media="screen and (width:2560px) and (height:1600px)">
+</head>
+
+<body>
+  <% include partials/header %>
+    <div class="wrapper plansPage">
+      <div class="container">
+        <div class="savedPlansPage">
+          <div class="headGoal">
+            <h3 class="savedPlans">Saved Plans</h3>
+            <em>All plans are valid upto 30 days</em>
+          </div>
+          <form>
+            <div class="row" id="savedPlans">
+              <div class="col-md-3">
+                <div class="myGoal">
+                  <h4 class="planNumber">1</h4>
+                  <img src="images/goals/Social/World Cup.png" alt="your goal">
+                  <h4>World Cup</h4>
+                  <h5>30sept 2017</h5>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <label>Goal Outcome:</label>
+                <p>abc123</p><br/>
+                <label>Monthly Amount:</label>
+                <p>120123</p><br/>
+              </div>
+              <div class="col-md-4">
+                <label>Number of Years</label>
+                <p>23</p><br/>
+                <label>Risk Profile:</label>
+                <p>abccde</p><br/>
+
+              </div>
+
+            </div>
+
+
+          </form>
+
+          <div class="pageSavedPlan">
+
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Sl No.</th>
+                    <th>Recomendation</th>
+                    <th>Allocation %</th>
+                    <th>Amount (&#x20B9;)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+
+                    <td>1</td>
+                    <td>abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</td>
+                    <td>65%</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+
+                    <td>2</td>
+                    <td>abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</td>
+                    <td>10% </td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+
+                    <td>3</td>
+                    <td>abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</td>
+                    <td>65%</td>
+                    <td>10000</td>
+                  </tr>
+
+                </tbody>
+
+
+              </table>
+              <table class="table" id="savedPlansButtons">
+                <thead>
+                  <tr>
+                    <th style="border: none;    float: right;"> <button class="btn saved">Proceed</button> <button class="btn saved" data-toggle="modal" data-target="#myModalDiscard">Discard</button></th>
+
+                  </tr>
+                </thead>
+              </table>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="modal fade" id="myModalDiscard" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+
+            <div class="modal-body">
+              <p>Are you sure you want to DISCARD?</p>
+              <button class="btn saved">YES</button>
+              <button class="btn saved">No</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container knowusFooter">
+      <% include partials/footer %>
+    </div>
+    <!--Custom Js links -->
+    <script src="javascripts/TweenMax.min.js"></script>
+    <script src="javascripts/TextPlugin.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script src="javascripts/control.js" type="text/javascript"></script>
+    <script>
+      $('.moodGoals > img').css('display', 'none');
+    </script>
+</body>
+
+</html>

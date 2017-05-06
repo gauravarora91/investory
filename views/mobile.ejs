@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+        <link rel="stylesheet" href="stylesheets/creativemobile.css">
+
+</head>
+
+
+<body>
+    <% include partials/headerMobile%>
+
+
+        <div class="container-fluid">
+
+
+            <div id="yourMoodP" class=" yourMoodParent">
+                <div class="yourMood">
+                    <h1></h1>
+                    <h4>Your investory. Our expertise.</h4>
+                    <p>How are you feeling today</p>
+                </div>
+                <div class="mood">
+                    <div id="homeCircleImg" class="myMood Broke">
+                        <img class="Broke" src="images/Broke.png" alt="Home view">
+                        <p>Feeling Broke</p>
+                    </div>    
+                    <div id="homeCircleImg"class="myMood Loved">
+                        <img class="Loved" src="images/Loved.png" alt="Home view">
+                        <p>Feeling Loved</p>
+                    </div>    
+                    <div id="homeCircleImg" class="myMood Nerdy">
+                        <img class="Nerdy" src="images/Nerdy.png" alt="Home view">
+                        <p>Feeling Nerdy</p>
+                    </div>    
+                    <div id="homeCircleImg" class="myMood Responsible">
+                        <img class="Responsible" src="images/Responsible.png" alt="Home view">
+                        <p>Feeling Responsible</p>
+                    </div>    
+                    <div id="homeCircleImg" class="myMood Rich">
+                        <img class="Rich" src="images/RICH.png" alt="Home view">
+                        <p>Feeling Rich</p>
+                    </div>    
+                    <div id="homeCircleImg" class="myMood Social">
+                        <img class="Social" src="images/Social.png" alt="Home view">
+                        <p>Feeling Social</p>
+                    </div>    
+                </div>
+                <div class="photosParent">
+                    <div class="row">
+                        <div class="frogIndex">
+                            <div class="col-md-12">
+                                <div class="frogImageMoods text-center">
+                                    <img id="setMood" class="img-responsive" src="#" alt="" />
+                                    <h1 id="setMoodText">Feeling Rich</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row rowIndexSlider">
+                        <div class="slider" style="   ">
+                            <div class="photos">
+                                <div class="photosInner">
+                                    <img class="change" id="Broke" src="images/smallBroke.png" alt="Home view">
+                                    <img class="change" id="Loved" src="images/smallLoved.png" alt="Home view">
+                                    <img class="change" id="Nerdy" src="images/smallNerdy.png" alt="Home view">
+                                    <img class="change" id="Responsible" src="images/smallResponsible.png" alt="Home view">
+                                    <img class="change" id="Rich" src="images/smallRich.png" alt="Home view">
+                                    <img class="change" id="Social" src="images/smallSocial.png" alt="Home view">
+                                </div>
+                            </div>
+                            <div class="slider-control">
+                                <img class="left" src="images/leftArrow.png" alt="Home view">
+                                <img class="right" src="images/rightArrow.png" alt="Home view">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="index2" id="sectionIndex2">
+                <h2 class="indexheader">Start your investment plan</h2>
+             	<p>I want to invest  &#8377; <input class="blankInput"  name="sip" id="sip" placeholder="" type="number"  max="7" value=""/> monthly for next <input class="blankInput"  name="years" id="years" placeholder="" type="number"  value="" style="margin: 0 10px; width: 30px"/> years</p>
+				<p id = "sipInvestErr" style="display: none; color: red;"> Please enter amount between INR 1000 to 100000.</p>
+			    <p id="sipTimeErr" style="display: none; color: red;"> Please enter time between 1 to 50 years.</p>
+                <div class="dotHr longDotUs mobile" style="border-top: 2px #35BFD3 dotted;   ">
+					
+<button type="" class="btn btn-lg moodNav getStarted" id="indexGetStarted" style="    width: 8em; position: relative;
+top: -1em;" onClick="getSIP();" > Invest </button>
+                </div>
+				
+				<p>I have &#8377; <input class="blankInput"  name="lumpsum" id="lumpsum" placeholder="" type="number" max="7" value=""/> to invest now. I need it back in <input class="blankInput"  name="lumpsumYears" id="lumpsumYears" placeholder="" type="number"  value=""/> years.</p>
+
+                <div class="dotHr longDotUs mobile" style="border-top: 2px #35BFD3 dotted;   ">
+					
+<button type="" class="btn btn-lg moodNav getStarted" id="indexGetStarted" style="    width: 8em; position: relative;
+top: -1em;" onClick="getLumpsum();" > Invest </button>
+                </div>
+					
+				
+				
+                <h2 class=" whatWeOffer">What we offer?</h2>
+                <div class="mobileWhatWeOffer">
+                    <div class="includeCarousel">
+                        <div id="myCarousel" class="carousel slide text-center carouselEdit carouselImages" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner " role="listbox">
+
+                                <div class="item active">
+                                    <div class="offer emergency-funds">
+                                        <img src="images/emergencyFunds.png" id="Broke" alt="Emergency Funds" width="auto" height="auto">
+                                        <p id="Broke">Emergency Funds</p>
+                                    </div>
+
+                                </div>
+                                <div class="item">
+                                    <div class="offer tax-savings">
+                                        <img src="images/taxSavings.png" alt="Tax Savings" id="Changing Season" width="auto" height="auto">
+                                        <p id="Changing Season">Tax Savings</p>
+
+                                    </div>
+
+                                </div>
+                                <div class="item">
+                                    <div class="offer smart-goals">
+                                        <img src="images/smartGoals.png" alt="Smart Goals" id="Responsible" width="auto" height="auto">
+                                        <p id="Responsible">Smart Goals</p>
+
+                                    </div>
+
+                                </div>
+                                <div class="item">
+                                    <div class="offer build-wealth">
+                                        <img src="images/buildWealth.png" alt="Build Wealth" id="Rich" width="auto" height="auto">
+                                        <p id="Rich">Build Wealth</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left  " href="#myCarousel" role="button" data-slide="prev">
+                            <img src="images/left.png">
+                            <!--    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right  " href="#myCarousel" role="button" data-slide="next">
+                            <!--    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                            <img src="images/Right.png">
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!--<button type="" id="indexScriptYourStory" class="btn btn-lg moodNav story" style="    position: relative;
+top: -1em;    width: initial;    float: left;"> Script your Story </button>-->
+            </div>
+
+            <br>
+            <div class="index3" id="indexThree">
+                <h2 class="indexheader3">How it works</h2>
+                <div class="row">
+
+                    <div class="col-sm-6 col-md-3 PAN">
+
+                        <img src="images/animHow/frog_pan.png" alt="Sign up with PAN number">
+
+                        <br> <br>
+                        <p>Sign up with <br />PAN number</p>
+                    </div>
+
+
+                    <div class="col-sm-6 col-md-3 Package">
+
+                        <img src="images/animHow/frog%20jump.png" alt="Choose a Package">
+
+
+
+                        <br><br>
+                        <p>Choose a <br />Package</p>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3 investing">
+                        <img width="50%" height="50%" src="images/animHow/frog_coin.png" alt="Start investing">
+
+
+                        <br><br>
+                        <p style="    margin-top: 0.5em;
+margin-left: 0.5em;">Start <br /> investing</p>
+                    </div>
+                    <br>
+                    <div class="col-sm-6 col-md-3 Withdraw">
+
+                        <img src="images/frog_note.png" alt="Withdraw anytime">
+                        <br><br>
+                        <p style="margin-top: 0.5em;">Withdraw <br /> anytime</p>
+                    </div>
+
+                </div>
+
+
+
+
+                <!--
+                <div class="row howItWorksRow" style="    border-bottom: 2px #35BFD3 dotted;">
+            <div class="column-sm-4 " style="top:2em">
+                
+                <img src="images/frog_pan.png" alt="Sign up with PAN number "><br>
+                <p >Sign up with <br />PAN number</p>
+            </div>
+            
+            <div class="column-sm-4 " >
+                
+                <img src="images/frog_jump.png" alt="Choose a Package"><br>
+                <p>Choose a <br />Package</p>
+            </div>
+            
+            <div class="column-sm-4 " >
+                
+                <img src="images/frog_coin.png" alt="Start investing"><br>
+                <p>Start <br /> investing</p>
+            </div>
+            
+            <div class="column-sm-4" >
+                
+                <img src="images/frog_note.png" alt="Withdraw anytime"><br>
+                <p>Withdraw <br /> anytime</p>
+            </div>
+                    
+        </div>
+    
+-->
+            </div>
+            <br>
+            <br>
+            <div class="index4">
+                <h2 class="indexheader3">Why us</h2>
+
+
+
+                <div class="includeCarousel">
+                    <div id="myCarousel2" class="carousel slide text-center carouselEdit" data-ride="carousel">
+
+
+                        <div class="carousel-inner" role="listbox">
+
+                            <div class="item active">
+                                <div class="information">
+                                    <h2>No cut</h2>
+                                    <p>We get no cut from fund houses,so our recommendations are unbiased.</p>
+                                </div>
+
+
+                            </div>
+                            <div class="item">
+                                <div class="information">
+                                    <h2>No charges</h2>
+                                    <p>We do not charge you any percentage for the amount you invest.</p>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="information">
+                                    <h2>Only direct</h2>
+                                    <p>See how direct schemes give you much higher returns than retail schemes</p>
+
+                                </div>
+
+                            </div>
+							    <div class="item">
+                                <div class="information">
+                                    <h2>100% safe</h2>
+                                    <p>Being in the industry for over 15 years, we know the importance of privacy and safety of your money and data.</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                    <a class="left  " href="#myCarousel2" role="button" data-slide="prev">
+                        <img src="images/left.png">
+
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right  " href="#myCarousel2" role="button" data-slide="next">
+
+                        <img src="images/Right.png">
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <button type="" data-toggle="modal" data-target="#signUp" class="btn btn-lg moodNav signUp" style="width:auto;    position: relative;
+top: -1em;float:left;"> Sign Up</button>
+                <br>
+                <!--section41-->
+                <div id="myCarousel" class="carousel slide text-center carouselEdit testimonial" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div id="index4" class="carousel-inner" role="listbox">
+
+                        <div class="item active">
+                            <div class="avatarTestimonial">
+                                <img src="images/avatar.png" alt="Person" width="96" height="96">
+                                <p class="name">Preety Shankar. CEO, Kode Solutions</p>
+
+                            </div>
+                            <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+                        </div>
+                        <div class="item">
+                            <div class="avatarTestimonial">
+                                <img src="images/avatar.png" alt="Person" width="96" height="96">
+                                <p class="name">Preety Shankar . CEO, Kode Solutions</p>
+
+                            </div>
+                            <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+                        </div>
+                        <div class="item">
+                            <div class="avatarTestimonial">
+                                <img src="images/avatar.png" alt="Person" width="96" height="96">
+                                <p class="name">Preety Shankar . CEO, Kode Solutions</p>
+
+                            </div>
+                            <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+                
+            </div>
+
+            <br>
+            <% include partials/footerMobile %>
+        </div>
+
+        <!--Custom Js links -->
+
+        <script src="javascripts/TweenMax.min.js"></script>
+        <script src="javascripts/TextPlugin.min.js"></script>
+        <script src="javascripts/main.js"></script>
+		<script src="javascripts/sip.js"></script>
+			<!--lumpsum sohan include js file-->
+	    <script src="javascripts/lumpsum.js"></script>
+        <script src="javascripts/control.js" type="text/javascript"></script>
+        <script src="javascripts/moodCalculater.js" type="text/javascript"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('.photosInner').click(function(e) {
+                $('.yourMood').css('display', 'none');
+                $('#yourMoodP .mood .myMood').removeClass('active');
+                $('#yourMoodP .mood .'+e.target.id).addClass("active");
+                });
+            });
+        </script>
+
+
+
+</body>
+
+
+</html>

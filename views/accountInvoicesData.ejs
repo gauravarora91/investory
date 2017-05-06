@@ -1,0 +1,62 @@
+        <head> <link rel="stylesheet" href="stylesheets/responsive.css"></head>             
+    <div id="invoices" class="text-center">
+           <link rel="stylesheet" href="stylesheets/responsive2560.css"  media="screen and (width:2560px) and (height:1600px)">
+        
+                <div class="page31" style="    margin-top: 4em;">
+                          
+					
+					<% if(stmt) { %>
+					
+                       <div class="table-responsive tableAccounts"style="" >
+                        <table class="table table1"  style="  "  >
+    <thead >
+      <tr >
+          
+          <th   class="thDates" >Dates</th>  
+        <th  class="thInvoices">Scheme</th>
+        <th class="thAllocation">Amount(&#x20B9;)</th>
+        <th class="thAmount">Units </th>
+      </tr>
+                            </thead>    </table>         
+    
+   <table class="table table2" style=" " >
+       <tbody class="scrollbar"  id="ex3"    >
+                          
+      
+          
+          <%for(var i=0;i<length;i++){%>
+           <tr>
+          <td><%=stmt[i].investdate%></td>
+        <td ><%=stmt[i].name%></td>
+        <td ><%=stmt[i].amount%></td>
+        <td><%=stmt[i].units%></td>
+               <tr>
+          <%}%>
+      </tr>
+     
+       </tbody>
+       
+  </table>
+             
+     <table class="table table3"  style=" "  >                
+    <tbody >
+        <td class="aba">
+      <button type="" class="btn btn-lg moodNav  InvoicesButtons"  > Print</button>  
+            <button type="" class="btn btn-lg moodNav InvoicesButtons"  > Mail</button>  
+            <button type="" class="btn btn-lg moodNav  InvoicesButtons"  > Save</button>  
+             
+        </td>
+       </tbody>
+                            </table>                    
+  
+                       </div>                 
+                                
+					<% }else { %>
+					<h1>No transactions yet. see you later. bye.</h1>
+					<% } %>
+          </div>
+    
+    </div>
+
+  <div class="container">
+  <% include partials/footerMobile %>>

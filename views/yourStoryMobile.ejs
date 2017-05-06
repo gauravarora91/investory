@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <% include partials/head %>
+	
+    <link rel="stylesheet" href="stylesheets/creativemobile.css">
+</head>
+	
+<body>
+  <% include partials/headerMobile%>
+           	
+	<div class="container">
+        
+<h2 class="story">My Story</h2>
+
+ <div style="margin-top: 0" id="myStory" >
+        <% if(invest) {  %>
+    <div style="margin-top: 0" class="panel">
+     
+      <div class="panel-body text-center" >
+        
+        <% var investmentCount = 0; %>
+		  <% goalCount = 0;for(i=0;i<invest.length; i++){ %>
+		<%  investmentCount += Number(invest[i].count); %>
+		<%  goalCount ++ %>
+		  
+<div style="display: flex" class="tar" id="tar<%= a=i+1 %>">
+<p style=" flex: 1; font-size: 20px; text-align: left"><%= invest[i].name %></p>
+
+<!--<p>0%</p>-->
+<p style="flex: 1; font-size: 14px; font-weight: 600; margin-top: 10px; text-align: right"><em> Just Started</em></p>
+</div>
+<div style="flex: auto" id="myProgress">
+  <div id="myBar1" style=" width: 5%">
+      
+  </div>
+ 
+</div>
+<br />
+<br />
+		  <% } %>
+</div>
+    </div>
+       
+      <h4 style="margin: 0 -15px; color: #333333;
+    font-weight: 700;">You are just <%= 15 - goalCount %> goals away from becoming <br><em>THE FROG</em></h4>
+
+        <div class="FrogHome"  >
+        <div class="btn-hr-wrapper clean"></div>
+            <div class="container">
+               <div class="row" style="margin: 20px 0">
+                
+				   <% var egg = "",tadpole = "", froglet = "", frog = "";
+				   if(goalCount <=3) 
+						egg = "%20BLACK";
+				   else if (goalCount <=5)
+					   tadpole = "%20BLACK";
+				    else if (goalCount <=10)
+					   froglet = "%20BLACK";
+				    else if (goalCount <=15)
+					   frog = "%20BLACK";
+					   
+	
+	%>
+				   
+                <div class="col-xs-3 froggie">
+                    <div class="row">
+                  <img src="images/animHow/3%20GOALS<%= egg %>.png" alt="The Egg"><br>
+                  <% if(goalCount < 5) {%>
+                  <div id="yCircle" class="yellow"></div>
+                  <% } %>
+                  </div>
+                </div>
+                <div class="col-xs-3 froggie">
+                    <div class="row">
+                  <img src="images/animHow/5%20GOALS<%= tadpole %>.png" alt="Tadpole"><br>
+                  <% if(goalCount < 10 && goalCount > 4) {%>
+                  <div id="yCircle" class="yellow"></div>
+                  <% } %>
+                  </div>
+                </div>
+                <div class="col-xs-3 froggie">
+                    <div class="row">
+                  <img src="images/animHow/10%20GOALS<%= froglet %>.png" alt="Froglet"><br>
+                  <% if(goalCount < 15 && goalCount > 9 ) {%>
+                  <div id="yCircle" class="yellow"></div>
+                  <% } %>            
+                  </div>      
+                </div>
+                <div class="col-xs-3 froggie">
+                    <div class="row">
+                  <img src="images/animHow/15%20GOALS<%= frog %>.png" alt="Frog"><br>
+                  <% if(goalCount == 15 ) {%>
+                  <div id="yCircle" class="yellow"></div>
+                  <% } %>
+                  </div>
+                </div>
+                
+          
+                    </div>
+                
+                </div>
+                <div class="btn-hr-wrapp clean"></div>
+            
+
+        </div>
+	 <% } else { %>
+        <h4 class="youAreYet" style=" font-family: mermaid; font-size: 32px; color: #333333; font-weight: 700;">Your Story is yet to begin. Invest now to start your <span style="color: #35BFD3">invest<span style="color: #FFDE15">o</span>ry<span></h4>
+	 <% } %>
+    </div>
+      
+	</div>
+
+
+        
+
+            
+        <img style="margin-bottom:2em;" src="images/animHow/MYSCREEN.png" class="img-responsive img-story">
+        
+        </div>
+        
+        </div>
+    <div class="container">
+     <% include partials/footerMobile %> 
+        
+    </div>
+	
+	
+	
+	
+	
+	  <!-- Modal -->
+        
+	
+	 
+          
+<!--Custom Js links -->
+       
+			 
+</body>
+</html>

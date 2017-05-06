@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <% include partials/head %>
+		   <link rel="stylesheet" href="stylesheets/creativemobile.css">
+</head>
+<body>
+
+ <% include partials/headerMobile%>
+  <div class="wrapper" style="overflow-y:scroll;overflow-x:hidden;">
+	  <div class="main">
+          
+
+<!--    <section id="section1"   >-->
+      
+     <div class="container-fluid how-it-works  text-center" >
+        
+     
+       
+
+      
+
+          <h2 style="padding-top: 0;font-size: 2em;" class="">Pricing Packages</h2>
+         <h6 style="    margin-bottom: 0;
+    font-size: 1.3em;
+    font-weight: 700;">Choose your pack</h6>
+         
+         
+          <div class="container content">
+         <div id="myCarousel" class="carousel slide text-center carouselEdit" data-ride="carousel">
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" style="    height: 8em;" >
+      
+    <div class="item active">
+            <div class="">
+                         <h2 class="h2hstyle shrinkleft1" >No cut</h2>
+                <p  class="shrinkpara" style="font-size: inherit;
+    text-align: center;" >We get no cut from fund houses, so our recommendations are unbiased.</p>
+    
+                        </div> 
+   
+    </div>
+    <div class="item">
+           <div class="">
+                         <h2 class="h2hstyle" >No charges</h2>
+                  <p class="shrinkpara" style="font-size: inherit;
+    text-align: center;">We do not charge you any percentage for the amount you invest.</p>
+    
+                        </div> 
+      
+    </div>
+    <div class="item">
+           <div class="">
+                       <h2 class="h2hstyle" >Only direct</h2>
+                  <p class="shrinkpara" style="font-size: inherit;
+    text-align: center;">See how direct schemes give you much higher returns than retail schemes</p>
+    
+                        </div> 
+    
+    </div>
+  </div>
+
+             
+
+      
+
+</div>
+        <!-- Left and right controls -->
+  <a id="pricingCarousel" class="left  " href="#myCarousel" role="button" data-slide="prev">
+      <img src="images/left.png">
+<!--    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+    <span class="sr-only">Previous</span>
+  </a>
+  <a  id="pricingCarousel" class="right  " href="#myCarousel" role="button" data-slide="next">
+<!--    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+            <img src="images/Right.png">
+    <span class="sr-only">Next</span>
+  </a> 
+
+
+  <p style="    margin-top: 0em;"></p> 
+         
+         
+           <div class="row pricingPanelRow" >
+      
+    <div class="col-sm-4">
+        <a href="#" class="tooltips"> 
+                  <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 id="GoodPlan">Good Plan</h2>
+              <div id="pricingDot">
+                <div class="pDot"></div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <h2>99 &#x20B9;</h2>
+          <ul id="Gp">
+              <li id="Gp1">Goal based reports</li>
+              <li id="Gp2">Profit & Loss report</li>
+              <li id="Gp3">Capital gains report</li>
+               <li id="Gp4">Monthly newsletter</li>
+             
+        
+            </ul>
+        </div>
+
+      </div> 
+            
+            <span id="GpData">
+       
+       Quick reports on world events like  Brexit,<br />
+     Union budget, Elections etc
+   
+    </span>  </a>
+
+    </div> 
+      
+    <div class="col-sm-4">
+          <a href="#" class="tooltips"> 
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2>Better Plan</h2>
+            <div id="pricingDot">
+                <div class="pDot"></div>
+            </div>
+        </div>
+        <div class="panel-body" >
+             <h2>199 &#x20B9;</h2>
+          <ul id="Bp">
+              
+              <li id="bp1">All "Good Plan" features</li>
+              <li id="bp2">Monthly call with advisor</li>
+              <li id="bp3">Bi- annual online meeting</li>
+    
+        
+            </ul>
+        </div>
+
+      </div> 
+        
+                    
+            <span id="BpData">
+       
+       Quick reports on world events like  Brexit,<br />
+     Union budget, Elections etc
+   
+    </span>  </a>
+    </div> 
+      
+    <div class="col-sm-4">
+        <a href="#" class="tooltips"> 
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2>Best Plan</h2>
+              <div id="pricingDot">
+                <div class="pDot"></div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <h2>499 &#x20B9;</h2>
+          <ul id="Bstp" >
+               <li id="Bstp1">All "Better Plan" features</li>
+               <li id="Bstp2">Transaction report</li>
+              <li id="Bstp3">Sector- wise investment reports</li>
+              <li id="Bstp4">Asset allocation reports</li>
+               <li id="Bstp5">Fund- wise reports</li>
+               <li id="Bstp6">Investory insights</li>
+               <li id="Bstp7">Product research</li>
+              <li id="Bstp8">Event Analysis</li>
+            </ul>
+        </div>
+      </div> 
+                    <span id="BstpData">
+       
+       Quick reports on world events like  Brexit,<br />
+     Union budget, Elections etc
+   
+    </span>  </a>
+    </div> 
+         </div>  
+        <div class="btn-hr-wrapper clean">
+
+               <% if(!loggedIn && !paid) {%>
+      			 <button type="" data-toggle="modal" data-target="#loginModal"  class="btn btn-white btn-lg moodNav pay" >Pay</button>
+      			  <% } else if(loggedIn && !paid){%>
+      			 <!--call for payU-->
+      			  <form action="/Pricing/pay" method="post">
+      			   <input type="hidden" id="plan" name="plan" value='Good Plan'>
+      			   <input type="hidden" id="planPrice" name="planPrice" value='5'>
+      			  	 <button type="submit"  class="btn btn-white btn-lg moodNav pay" >Pay</button>
+      			  </form>
+      			 <%} else if(loggedIn && paid) {%>
+
+      			  <form action="/GoalSelection" method="get" >
+                    <input type="hidden" name="tab" value="6" />
+                    <button type="submit" class="btn btn-white btn-lg moodNav pay" >Invest</button>
+
+      			  </form>
+
+      			  <%}%>
+        </div>
+
+<!--    <section id="section2">-->
+        
+  
+     <div class="container-fluid how-it-works frNow text-center">
+        
+            <h2 class="" style="padding-top:0;">How it works</h2>
+            
+                    <div class="row howItWorksRow" style="    border-bottom: 2px #35BFD3 dotted;">
+                <div class="column-sm-4 " style="top:2em">
+                   
+                    <img src="images/frog_pan.png" alt="Sign up with PAN number" width="65%" style="top:0"><br>
+                    <p  style="top:2.5em">Sign up with <br />PAN number</p>
+                </div>
+                
+                <div class="column-sm-4 " >
+                   
+                    <img src="images/frog_jump.png" alt="Choose a Package" width="65%"><br>
+                    <p style="margin-left: 2.8em;">Choose a <br />Package</p>
+                </div>
+                
+                <div class="column-sm-4 " style="top:1.5em">
+                    
+                    <img src="images/frog_coin.png" alt="Start investing" width="70%"><br>
+                    <p>Start <br /> investing</p>
+                </div>
+                
+                <div class="column-sm-4" style="top:3em">
+                    
+                    <img src="images/frog_note.png" alt="Withdraw anytime" width="90%" style="left:0; top: 0.5em"><br>
+                    <p>Withdraw <br /> anytime</p>
+                </div>
+                        
+            </div>
+        
+         
+         
+         
+<!--
+<div class="dotHr howItWorksSignUp"  style="">
+         
+
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                <div id="idSignUp"></div>
+               <div id="idSignUp"></div>
+
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+              <div id="idSignUp"></div>
+              <div id="idSignUp"></div>
+
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+              <div id="idSignUp"></div>
+
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+              
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+           <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div  id="idSignUp"></div>
+          <div id="idSignUp"></div>
+          <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+          <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div></div>
+                  <div ></div>
+          <div ></div>
+                  <div ></div>
+                  <div ></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                              <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                                    <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+          
+                  <div></div>
+                  <div></div>
+      <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+          <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+-->
+         
+         
+         <button type="" data-toggle="modal" data-target="#signUp" class="btn btn-lg moodNav signUp" style="width:initial;position:relative;top:-1em;" > Sign Up</button> 
+<!--
+               
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+         
+   <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div id="dotsvisible1440"></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+               <div id="idSignUp"></div>
+
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+              <div id="idSignUp"></div>
+              <div id="idSignUp"></div>
+
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+              <div id="idSignUp"></div>
+
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+              
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+          <div id="idSignUp"></div>
+           <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+                  <div id="idSignUp"></div>
+          <div></div>
+          <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+          <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+          <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                              <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                                    <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                    
+                 
+         </div>
+            
+-->
+        </div> <% include partials/footerMobile %> 
+        
+<!--    </section>-->
+
+
+        
+
+  
+   
+          </div>
+       
+      </div>
+     
+    </div>
+<!--Custom Js links -->
+        
+        
+
+  <script src="javascripts/TweenMax.min.js"></script>
+<script src="javascripts/TextPlugin.min.js"></script>
+         <script src="javascripts/main.js"></script>
+    <script src="javascripts/control.js" type="text/javascript"></script>
+       
+   
+</body>
+</html>

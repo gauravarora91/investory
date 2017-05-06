@@ -1,0 +1,221 @@
+<!--The fixed header of the page    -->
+<style>
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        width: 280px;
+        /*example + never use min-width with this solution */
+        height: 100%;
+    }
+</style>
+<header>
+
+
+    <div class="headerBackground">
+        <nav class="navbar navbar-default mod-nav">
+            <div class="container-fluid">
+                <div class="" style="">
+                    <!--    <nav class="navbar navbar-inverse  mobileHeader" >-->
+
+
+                    <nav class="navbar navbar-default navbar-fixed-side navbar-fixed-side-right mobileHeader" role="navigation">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <!--      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">-->
+
+                                <button type="button" class="navbar-toggle" data-toggle="slide-collapse" data-target=".navbar-collapse">
+        <span class="icon-bar bar1"></span>
+        <span class="icon-bar bar2"></span>
+        <span class="icon-bar bar3"></span>                        
+      </button>
+								
+                                <a class="" href="/" class="tooltips">
+                                    <img class="img-responsive" id="investory" src="images/mobileIcon.png" alt="" />
+                                    <!--                   <img class="img-responsive logo-icon" src="images/logoIcon.png" alt="" />-->
+                                </a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+	
+								
+                                <ul class="nav navbar-nav">
+
+                                    <li class="dropdown">
+<% if(loggedIn) { %>
+									  <li><a href="/MyStory">My Story</a></li>
+                                        <li><a href="/Profile">My Profile</a></li>
+                                      <li><a href="/reports">Reports</a></li>
+									<li><a href="/Settings">Setting</a></li>
+									<li><a href="/Invoices">Invoices</a></li>
+									<li><a href="/Invoices">Transactions</a></li>
+									<li><a href="/Invoices">Investments</a></li>
+                                     <!--<li><a href="/Transaction">Transactions</a></li>
+                                     <li><a href="/Investment">Investments</a></li>-->
+<% } %>
+                                        <br>
+                                        <li><a href="/KnowUs">Know Us</a></li>
+                                        <li><a href="/Pricing">Pricing</a></li>
+                                        <li><a href="/GoalSelection">Get Started</a></li>
+                                        <li><a href="/FAQs">FAQs</a></li>
+<!--                                        <li><a href="#">Blog</a></li>-->
+										<% if(!loggedIn) { %>
+                                        <li><a href="#" data-target="#loginModal" data-toggle="modal" onClick="closeNav()">Login</a>
+											<% } else{ %>
+											<li><a href="/logout">Log Out</a></li>
+										<% } %>
+<!--						
+                                            <li><a href="/logout">Logout</a></li>
+                                        </li>
+-->
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+
+</header>
+
+
+
+<!-- Modal -->
+<div ng-app="">
+    <div class="modal fade" id="signUp" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div>
+                        <form name="signUpForm" class="form-horizontal" action="/signup" method="post">
+                            <h2>Sign Up</h2>
+                            <hr>
+                            <input type="number" class="form-control" id="mnumber" name="mnumber" placeholder="Mobile Number" ng-model="phoneNumber"
+                                ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/" required/>
+                            <span ng-show="signUpForm.mnumber.$touched && signUpForm.mnumber.$invalid">Phone number is invalid.</span>
+
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email" ng-pattern="/^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/"
+                                required />
+                            <span ng-show="signUpForm.email.$touched && signUpForm.email.$invalid  ">Email Invalid.</span>
+
+
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Name" ng-model="myName" ng-minlength="2"
+                                ng-maxlength="50" required/>
+                            <span ng-show="signUpForm.username.$touched && signUpForm.username.$invalid">Name invalid.</span>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" ng-model="Password" required
+                            />
+                            <span ng-show="signUpForm.password.$touched && signUpForm.password.$invalid">Password invalid.</span>
+                            <button type="submit" class="btn btn-lg login" ng-disabled="signUpForm.$invalid"> Submit </button>
+
+                        </form>
+                    </div>
+                    <button type="button" class="btn btn-lg facebook" onclick="auth('facebook')">Sign through Facebook</button>
+                    <button type="button" class="btn btn-lg google" onclick="auth('google')">Sign through Google+</button>
+                    <p><em>By clicking Sign Up you agree to the <a href="#">terms and conditions</a></em></p>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div>
+
+                        <form name="exampleForm" class="form-horizontal" action="/login" method="post">
+                            <h2>Login</h2>
+
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email" ng-pattern="/^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/"
+                                required />
+                            <span ng-show="exampleForm.email.$touched && exampleForm.email.$invalid  ">Email Invalid.</span>
+
+
+
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="Password" required
+                            />
+
+                            <span ng-show="exampleForm.password.$touched && exampleForm.password.$invalid">Password invalid.</span>
+
+                            <button id="login" type="submit" class="btn btn-lg login " ng-disabled="exampleForm.$invalid"> Login </button>
+                            <button type="" class="btn btn-lg sign-up" data-toggle="modal" data-target="#signUp" data-dismiss="modal">Sign Up</button>
+                            <a href="#" class="forgot">Forgot Password?</a>
+                            <button type="button" class="btn btn-lg facebook" onclick="auth('facebook')">Login with Facebook</button>
+                            <button type="button" class="btn btn-lg google" onclick="auth('google')">Login with Google+</button>
+
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--subscribe to our newsLetter Modal-->
+    <div class="modal fade" id="EmailForm" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content EmailForm">
+                <div class="modal-body " style="">
+
+                    <h2 class="EmailHead">Enter Email</h2>
+                    
+                    <form class="formmodel EmailInfo" name="newsletterEmail">
+
+                        <input class="form-control Email" id="email" placeholder="" name="email" ng-model="email" ng-pattern="/^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/"
+                            required />
+                       <span ng-show="newsletterEmail.email.$touched && newsletterEmail.email.$invalid  "  >Email Invalid.</span>
+
+
+                      <button class="btn btn-lg moodNav   " style="margin-top:5%;width:auto;"  type="submit" disabled="newsletterEmail.$invalid"> Submit </button> 
+                            <br/>
+
+                            
+                        <!--end dotHr-->
+                    </form>
+                </div>
+                <!--body3-->
+            </div>
+            <!--content3-->
+        </div>
+        <!--dialog3-->
+
+    </div>
+
+</div>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-messages.min.js'></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script>
+      $('[data-toggle="slide-collapse"]').on('click', function () {
+       $navMenuCont = $($(this).data('target'));
+    $navMenuCont.animate({ 'width': 'toggle' }, 350);
+  });
+</script>
+
+
+<script>
+    $(document).on('click', '.navbar-collapse', function (e) {
+        if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
+            $(this).collapse('hide');
+        }
+    });
+</script>
+        

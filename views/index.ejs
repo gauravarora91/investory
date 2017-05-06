@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include partials/head %>
+		 <script>
+	  $(document).ready(function(){
+      $(".main").onepage_scroll({
+        sectionContainer: "section",
+        responsiveFallback: 300,
+        loop: false
+      });
+		});
+		
+	</script>
+		<script src="javascripts/jquery.onepage-scroll.js" ></script>
+		<link rel="stylesheet" href="stylesheets/responsive.css">
+		<link rel="stylesheet" href="stylesheets/onepage-scroll.css">
+<link rel="stylesheet" href="stylesheets/responsive2560.css"  media="screen and (width:2560px) and (height:1600px)">
+</head>
+<body style="index-page">
+	<% include partials/header %>
+    	<div class="wrapper">
+			<div class="main">
+				<section id="section1" >
+					<div class="container-fluid">
+						<div id="bg_color" >
+							<div id="circle_1" class="circle prod_1">
+								<img src="images/square.gif">
+								<span></span>
+							</div>
+							<div id="circle_2" class="circle prod_1">
+								<span></span>
+								<img src="images/square.gif">
+							</div>
+							<div id="circle_3" class="circle prod_1" >
+								<span></span>
+								<img src="images/square.gif">
+							</div>
+							<div id="circle_4" class="circle prod_1" >
+								<span></span>
+								<img src="images/square.gif">
+							</div>
+								<div id="circle_5" class="circle prod_1" >
+								<span></span>
+								<img src="images/square.gif">
+							</div>
+							<div id="circle_6" class="circle prod_1" >
+								<span></span>
+								<img src="images/square.gif">
+							</div>
+							<div id="circle_7" class="circlewhite prod_1" >
+								<span></span>
+								<img src="images/square.gif">
+							</div>
+							<div id="circle_8" class="circlewhite prod_1" >
+								<span></span>
+								<img src="images/square.gif">
+							</div>
+							<div id="circle_9" class="circlewhite prod_1" >
+								<span></span>
+								<img src="images/square.gif">
+							</div>
+						</div>
+						<div>
+							<div class="yourMood text-center">
+							<h1></h1>
+							<h4>Your investory. Our expertise.</h4>
+							<p>How are you feeling today</p>
+						</div>
+						<div id="homeCircleImg" class="frogImage text-center">
+							<img class="img-responsive" src="images/Broke.png" alt="" />
+							<h1>Feeling Rich</h1>
+						</div>
+
+						<div class="container-fluid text-center menu">
+							<p id="moodOfMonth"><i>mood of</i><br /> THE MONTH</p>
+							<div class="feelingCircularMenu">
+								<ul>
+	
+									<li id="Broke" ><a href="#">feeling <br/>BROKE</a></li>
+									<li id="Nerdy" ><a href="#">feeling <br/>NERDY</a></li>
+									<li id="Rich" ><a href="#">feeling <br/>RICH</a></li>
+									<li id="Responsible" ><a href="#">feeling <br/>RESPONSIBLE</a></li>
+									<li id="Loved" ><a href="#">feeling <br/>LOVED</a></li>
+									<li id="Social" ><a href="#">feeling <br/>SOCIAL</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+<section id="section2">
+	<div class="container-fluid what-we-offer text-center">
+		<h2>Start your investment plan</h2>
+			<p>I want to invest  &#8377; <input class="blankInput"  name="sip" id="sip" placeholder="" type="number" max="7" value=""/> monthly for next <input class="blankInput"  name="years" id="years" placeholder="" type="number"  value=""/> years.</p>
+			<p id = "sipInvestErr" style="display: none; color: red;"> Please enter amount between INR 1000 to 100000.</p>
+			<p id="sipTimeErr" style="display: none; color: red;"> Please enter time between 1 to 50 years.</p>
+			<div class="btn-hr-wrapper">
+				<button type="" class="btn btn-white btn-lg moodNav getStarted" id="indexGetStarted" onClick="getSIP();" > Invest </button>
+			</div>
+		<!--lumpsum sohan start-->
+		<p>I have &#8377; <input class="blankInput"  name="lumpsum" id="lumpsum" placeholder="" type="number" max="7" value=""/> to invest now. I need it back in <input class="blankInput"  name="lumpsumYears" id="lumpsumYears" placeholder="" type="number"  value=""/> years.</p>
+			<div class="btn-hr-wrapper">
+				<button type="" class="btn btn-white btn-lg moodNav getStarted" id="indexGetStarted" onClick="getLumpsum();" > Invest </button>
+			</div>
+		<!--lumpsum sohan end-->
+			<h2 class="indexHeadngLookingFor">Looking for?</h2>
+			<div class="container">
+				<div id="indexLookingFor" class="row" >
+					<div class="col-sm-6 col-md-3 emergency-funds">
+						<img src="images/emergencyFunds.png"  id="Broke" alt="Emergency Funds">
+						<p id="Broke">Emergency Funds</p>
+					</div>
+					<div class="col-sm-6 col-md-3 tax-savings">
+						<img src="images/taxSavings.png"  alt="Tax Savings" id="Changing Season"><br>
+						<p id="Changing Season">Tax Savings</p>
+					</div>
+
+					<div class="col-sm-6 col-md-3 build-wealth">
+						<img src="images/buildWealth.png"  alt="Build Wealth" id="Rich"><br>
+						<p id="Rich">Build Wealth</p>
+					</div>
+
+					<div class="col-sm-6 col-md-3 smart-goals">
+						<img src="images/smartGoals.png"  alt="Smart Goals" id="Responsible"><br>
+						<p id="Responsible">Smart Goals</p>
+					</div>
+				</div>
+
+			</div>
+
+	<!--		<div class="btn-hr-wrapper">
+				<a href="/GoalSelection" id="indexScriptYourStory"  class="btn btn-white btn-lg moodNav story" > Script your Story </a>
+			</div>-->
+		</section>
+		<section id="section3">
+			<div class="container-fluid how-it-works how-home text-center ">
+				<h2 class="">How it works</h2>
+				<ul class="pagination">
+					<li>
+						<a href="">1</a>
+						<div  id="indexGetStartedHide768"></div><div  id="indexGetStartedHide768"></div><div  id="indexGetStartedHide768"></div><div  id="indexGetStartedHide768"></div><div id="indexGetStartedHide768"></div><div id="indexGetStartedHide768"></div><div id="indexGetStartedHide768"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					</li>
+					<li>
+						<a href="">2</a>
+						<div  id="indexGetStartedHide768"></div><div  id="indexGetStartedHide768"></div><div  id="indexGetStartedHide768"></div><div  id="indexGetStartedHide768"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					</li>
+					<li>
+						<a href="">3</a>
+						<div  id="indexGetStartedHide768"></div><div  id="indexGetStartedHide768"></div><div  id="indexGetStartedHide768"></div><div  id="indexGetStartedHide768"></div><div id="indexGetStartedHide768"></div><div id="indexGetStartedHide768"></div><div id="indexGetStartedHide768"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					</li>
+					<li>
+						<a href="">4</a>
+					</li>
+				</ul>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6 col-md-3 PAN">
+							<img id="orgPan" src="images/animHow/frog_pan1.png" alt="Sign up with PAN number">
+							<img id="flashPan" src="images/animHow/pan.png" style="top: -5.5em; left: 0.5em;">
+							<p>Sign up with<br/>PAN number</p>
+						</div>
+						<div class="col-sm-6 col-md-3 Package">
+							<img id="p1" src="images/animHow/frog%20jump3.png" alt="Choose a Package">
+							<img id="p2" style="top: 1.5em; left: 3em; position: absolute;" src="images/animHow/frog%20jump5.png" alt="Choose a Package">
+							<img id="p3" style=" opacity:0; top: 1.5em; left: 3em; position: absolute;" src="images/animHow/frog%20jump6.png" alt="Choose a Package">
+							<p>Choose a<br/>Package</p>
+						</div>
+						<div class="col-sm-6 col-md-3 investing">
+							<img id="f1" src="images/animHow/frog_coin1.png" alt="Start investing">
+							<img  id="f3" src="images/animHow/frog_coin3.png" alt="Start investing" style="position: absolute; z-index: -1;    top: 0em; left: 9.5em;">
+							<img  id="f2" src="images/animHow/frog_coin2.png" alt="Start investing"  style="position: absolute; z-index: -1; top: 3em; left: 8.7em;">
+							<p style="    margin-top: 0.8em;">Start<br/>investing</p>
+						</div>
+						<div class="col-sm-6 col-md-3 Withdraw">
+							<img id="w1" src="images/frog_note.png" alt="Withdraw anytime">
+							<img id="w2" style="  opacity:0;  position: absolute; top: -0.5em; left: 15px;" src="images/animHow/frog_note1.png">
+							<p style="margin: 1em auto;">Withdraw<br/>anytime</p>
+						</div>
+					</div>
+				</div>
+				<div class="btn-hr-wrapper">
+					<button type="" class="btn btn-lg btn-white moodNav pricing" > Pricing Options</button>
+				</div>
+			</div>
+		</section>
+		<section id="section4">
+			<div class="container-fluid why-us text-center">
+				<h2 class="">Why us</h2>
+				<div class="container content">
+					<div id="indexFourColumns" class="row indexColumn">
+						<div class="col-sm-3" id="setColumn">
+							<h2>No cut</h2>
+							<p>We do not take any cut (in other words shortcut) from any fund house, in order to give you unbiased and honest advice.</p>
+						</div>
+						<div class="col-sm-3" id="setColumn">
+							<h2>No charges</h2>
+							<p>We also do not charge you based on the amount you invest; just a small monthly fee for our advisory services.</p>
+						</div>
+							<div class="col-sm-3" id="setColumn">
+							<h2>Only direct</h2>
+							<p>We recommend only direct schemes that give you much higher returns compared to retail options (which pay commissions to advisors)</p>
+						</div>
+						<div class="col-sm-3" id="setColumn">
+							<h2>100% safe</h2>
+							<p>Being in the industry for over 15 years, we know the importance of privacy and safety of your money and data.</p>
+						</div>
+					</div>
+				</div>
+				<div class="btn-hr-wrapper">
+					<% if(!loggedIn) {%>
+						<button type="" data-toggle="modal" data-target="#signUp" class="btn btn-white btn-lg moodNav signUp" > Sign Up</button>
+				<% } %>
+				</div>
+				<div class="container">
+					<div id="myCarousel" class="carousel slide text-center carouselEdit" data-ride="carousel">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<div class="avatarTestimonial">
+									<img src="images/avatar.png" alt="Person" width="96" height="96">
+									<p class="name">Preety Shankar - <span class="italic">CEO, Kode Solutions</span></p>
+								</div>
+								<h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+							</div>
+							<div class="item">
+								<div class="avatarTestimonial">
+									<img src="images/avatar.png" alt="Person" width="96" height="96">
+									<p class="name">Preety Shankar - <span class="italic">CEO, Kode Solutions</span></p>
+								</div>
+								<h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+							</div>
+							<div class="item">
+								<div class="avatarTestimonial">
+									<img src="images/avatar.png" alt="Person" width="96" height="96">
+									<p class="name">Preety Shankar - <span class="italic">CEO, Kode Solutions</span></p>
+								</div>
+								<h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+							</div>
+						</div>
+						<!-- Left and right controls -->
+						<a class="left  " href="#myCarousel" role="button" data-slide="prev">
+							<img src="images/left.png">
+							<!--    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right  " href="#myCarousel" role="button" data-slide="next">
+							<!--    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+							<img src="images/Right.png">
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+					<div class="container indexFoooter">
+					<% include partials/footer %>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+
+
+<navigation>
+
+<ul class="onepage-pagination" id="dotMenu">
+	<li><a data-index="1" href="#section1" class="active dot"></a></li>
+	<li><a data-index="2" href="#section2" class="dot"></a></li>
+	<li><a data-index="3" href="#section3" class="dot"></a></li>
+	<li><a data-index="4" href="#section4" class="dot"></a></li>
+</ul>
+
+
+<!--<div id="dotMenu">
+	<div data-index="1" href="#section1" class="dot"></div>
+	<div data-index="2" href="#section2" class="dot"></div>
+	<div data-index="3" href="#section3" class="dot"></div>
+	<div data-index="4" href="#section4" class="dot"></div>
+</div>-->
+<div><img src="images/downarrow.png" id="angle"> </div>
+
+</navigation>
+
+
+
+
+
+<!--Custom Js links -->
+
+<script src="javascripts/TweenMax.min.js"></script>
+<script src="javascripts/TextPlugin.min.js"></script>
+         <script src="javascripts/main.js"></script>
+			 <script src="javascripts/sip.js"></script>
+			<!--lumpsum sohan include js file-->
+	     <script src="javascripts/lumpsum.js"></script>
+    <script src="javascripts/control.js" type="text/javascript"></script>
+	
+        <script>
+    $('.carousel').carousel({
+    interval: 6000
+});
+</script>
+
+
+
+</body>
+</html>

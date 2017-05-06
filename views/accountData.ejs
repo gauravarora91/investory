@@ -1,0 +1,70 @@
+<!--<section>-->
+<div id="account">
+  <div class="text-center" style="  ">
+      <div class="circleClass" style="    margin-left: 0%;margin-top: 2em;">
+          <svg class="roundSet" height="100" width="100"style="display:none;">
+            <circle cx="50" cy="50" r="30" stroke="#FFDE15" stroke-width="3" fill="#FFDE15" />
+            <text style="font-size: 2em;" x="50%" y="50%" text-anchor="middle" stroke="#35BFD3" fill="#35BFD3" stroke-width="1px" dy=".3em">235</text>
+            Sorry, your browser does not support inline SVG.
+          </svg>
+          <p class="RewardPoints" style="    position: relative; top: -1em;display:none;">Reward Points</p>
+        </div>
+  </div>
+    
+    
+    <br>
+    <br>
+  <div class="topNav abc topNav2">
+    <a class="btn btn-lg moodNav storyBtn <% if( currentPage == '/Invoices' ) { %> active <% } %> " href="Invoices">My Investments</a> 
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <a class="btn btn-lg moodNav storyBtn <% if( currentPage == '/Investment' ) { %> active <% } %>" style="width: 8em;"  href="Investment">My Invoices</a>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <a class="btn btn-lg moodNav storyBtn <% if( currentPage == '/transaction' ) { %> active <% } %>" style="width: 8em;" href="Transaction">My Transactions</a> 
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div> 
+      <div></div>
+    <a class="btn btn-lg moodNav storyBtn <% if( currentPage == '/Settings' ) { %> active <% } %>"  href="Settings" id="ttt">My Settings</a>
+  </div>
+
+   
+	<% if(path1 == "accountInvoicesData"){ %>
+ 	<%  include accountInvoicesData %>
+ <% }else if(path1 == "accountSettingsData"){ %>
+ 	 <% include accountSettingsData %>
+
+<% }
+    else if(path1 == "accountInvestmentData"){ %>
+ 	 <% include accountInvestmentData %>
+
+<% }else if(path1 == "accountTransactionData"){ %>
+ 	 <% include accountTransactionData %>
+
+<% } else { %>
+<% include accountInvoicesData %>
+<% } %>
+
+	
+	
+      </div>
+
+	 	 
+<!--</section>-->

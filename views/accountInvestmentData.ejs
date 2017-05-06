@@ -1,0 +1,53 @@
+        <head> <link rel="stylesheet" href="stylesheets/responsive.css"></head>             
+    <div id="invoices" class="text-center">
+           <link rel="stylesheet" href="stylesheets/responsive2560.css"  media="screen and (width:2560px) and (height:1600px)">
+        
+                <div class="page31" style="    margin-top: 4em;">
+                                 
+                       <div class="table-responsive tableAccounts investmentTable"style="" >
+                        <table class="table table1"  style="  "  >
+    <thead >
+      <tr >
+        <th class="thDates" >Subscription Id</th>
+        <th class="thInvoices" style= "border-right: 1px solid #35BFD3; width: 140px">Order Date</th>
+        <th class="thAmount" style= "border-right: 1px solid #35BFD3; width: 70px">Duration</th>
+        <th class="thAllocation" style= "border-right: 1px solid #35BFD3">Amount</th>
+        <th style= "border-right: 1px solid #35BFD3">Payment Reference</th>
+        <th class="thAmount" style="width: 140px">Renewal Date</th>
+      </tr>
+                            </thead>    </table>         
+    
+   <table class="table table2" style=" " >
+      <tbody class="scrollbar"  id="ex3">
+          <% for(i=0; i < stmt.length; i++) {%>   
+        <tr>
+          <td><%= stmt[i].usersubscriptionorderid %></td>
+          <td style= "border-right: 1px solid #35BFD3; width: 140px"><%= stmt[i].orderdate %></td>
+          <td style= "border-right: 1px solid #35BFD3; width: 70px"><%= stmt[i].durationdays %></td>
+          <td style= "border-right: 1px solid #35BFD3"><%= stmt[i].amount %></td>
+          <td style= "border-right: 1px solid #35BFD3"><%= stmt[i].paymentreference %></td>
+          <td style="width: 140px"><%= stmt[i].planrenewaldate %></td>
+        </tr>
+          <% } %>
+      </tbody>
+  </table>
+             
+     <table class="table table3"  style=" "  >                
+    <tbody >
+        <td class="aba">
+      <button type="" class="btn btn-lg moodNav  InvoicesButtons"  > Print</button>  
+            <button type="" class="btn btn-lg moodNav InvoicesButtons"  > Mail</button>  
+            <button type="" class="btn btn-lg moodNav  InvoicesButtons"  > Save</button>  
+             
+        </td>
+       </tbody>
+                            </table>                    
+  
+                       </div>                 
+                    
+
+          </div>
+     <div class="container">
+   <% include partials/footer %> 
+         </div>
+    </div>

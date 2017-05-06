@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <% include partials/head %>
+	
+    <link rel="stylesheet" href="stylesheets/creativemobile.css">
+</head>
+	
+    <body ng-app="">
+ <% include partials/headerMobile%>   
+    
+  <div class="container">
+    
+   
+               <div class="row " style="">
+                
+                <div class="col-xs-3 ">
+                   
+                    <img src="images/animHow/3%20GOALS.png" alt="The Egg">
+                
+                </div>
+                   <div class="col-xs-3 ">
+                   
+                    <img src="images/animHow/5%20GOALS.png" alt="Tadpole">
+        
+                </div>
+                   <div class="col-xs-3 ">
+                   
+                    <img src="images/animHow/10%20GOALS.png" alt="Froglet">
+                  <div id="yCircle" ></div>
+                </div>
+                   <div class="col-xs-3 ">
+                   
+                    <img src="images/animHow/15%20GOALS%20BLACK.png" alt="Frog">
+                 
+                </div>
+                
+          
+              
+                
+                </div>
+         
+           <div class="container-fluid how-it-works contentEdit">
+                                    
+                 <div class="row rowTransform" style="">
+                        
+                     <form name="profileInformation" class="form-horizontal" action="/profile" method="post">
+                                                     
+                         <div id=""  class="col-xs-12">
+                           
+                                                               
+                                 <label class=" col-xs-3 colo"style="" >Name:</label>
+                                                                        
+                                 <div class="col-xs-9">
+                                  <input type="text" class="form-controler" name="username" id="username" value="user" /> 
+                                                                    
+                                 </div>
+                                            <br>
+                                                              
+                               
+                            
+                                <div class="form-group">
+                                    <label class=" col-xs-3" >Mobile:</label>
+                                           <div class="col-xs-9">
+                                       <input type="number" class="form-controler" name="mnumber" id="mnumber" value="987456321">
+                                             
+                                                </div>
+                                           <br>
+                                                            </div>
+                               
+                               
+                          
+                                       
+                   <div class="form-group">
+                                          <div class="dropdown">
+                     <label class="col-xs-3" for="text"  >Gender:</label>
+                                                                               
+                                              
+                 <div class="col-xs-9 collum">
+                  	 <select class="form-controler edit selectGender" id="gender" name="gender"  ><span class="caretNext caretNext1 caret "></span>
+				 <option>Male</option>
+    <option >Female</option>
+  
+                            </select>
+                                              
+                                                                                                 
+                             </div>
+                                            <br>
+                                  
+                             
+                                                                   
+                         </div>        
+                                                                
+                                              
+                                              </div>     
+                
+                               
+                               
+                                                               
+                                                
+                        <div class="form-group">
+                                                                   
+                                                  
+                            <label class=" col-xs-3 " >Address:</label>
+                                                                            
+                                                
+                            <div class="col-xs-9">
+                                                                               
+                                            
+                                     <textarea  class="form-controler addressSection2" rows="6" id="comment" type="text"  name="address" ng-model="address" ng-minlength="20"
+                                ng-maxlength="200"              
+                                           required/></textarea>  
+<!--
+                            <span ng-show="profileInformation.address.$touched && profileInformation.address.$invalid "  
+   >Address is required</span>   
+                                                  
+-->
+                            </div>
+                                           
+                            <br>
+                                                                
+                          
+                                           
+                    </div>     
+                                                         
+                                                                                      
+                                                                
+       
+                          
+                                                            
+                          <div class="form-group ">
+                                                                   
+                              <label class=" col-xs-3">Email:</label>
+                                                                        
+                              <div class="col-xs-9">
+                                                                           
+                                  <input type="email" class="form-controler" name="email" id="email" value=" abc@gmail.com"  > 
+                                 
+
+                                                                        
+                              </div>
+                                            <br>
+                                                                
+                          </div> 
+                                                            
+                                                               
+              <div class="form-group ">
+                                                                        
+                              <label class=" col-xs-3  " >DOB:</label>
+                                                                           
+                              <div class="col-xs-9" >
+                              	  
+                             <input id="calendar" type="date" value=""
+								  style="  " class="form-controler" > 
+                                                                          
+                              </div>
+                                        
+                         </div>
+                         
+                          
+                         <div class="form-group ">
+                              <label class=" col-xs-3 colo"style="">Age:</label>
+                                                                     
+                              <div class="col-xs-9 " id="profileAge" style=""  maxvalue="2">
+                                                                                
+                                  <input type="number" id="age" value="" name="age" class="form-controler Ageing1"
+                                         style=""  ng-model="Age" ng-minlength="2" ng-maxlength="2" required/>
+<!--                                        <span ng-show="profileInformation.age.$touched && profileInformation.age.$invalid"  >Age is invalid(must be 18 and above).</span>                                         -->
+                              </div>
+                                         
+                                                                
+                          </div>
+                                                            
+                                                               
+                                                     
+                                                             
+                       <div class="form-group">
+                                          <div class="dropdown">
+                     <label class="col-xs-3" for="text"  >Marital Status:</label>
+                                                                               
+                                              
+                 <div class="col-xs-9 collum">
+                  	 <select class="form-controler edit selectGender" id="gender" name="gender"  ><span class="caretNext caretNext1 caret "></span>
+				 <option >Married</option>
+    <option>Single</option>
+  
+                            </select>
+                                              
+                                                                                                 
+                             </div>
+                                         
+                                  
+                             
+                                                                   
+                         </div>        
+                                                                
+                                              
+                                              </div>     
+                
+                 
+                             
+                                                            
+                          <div class="form-group ">
+                                                                        
+                              <label class="col-xs-3">PAN:</label>
+                                                                            
+                              <div class="col-xs-9">
+                                                                                
+                                  <input type="text" value="" class="form-controler" name="pan" id="pan"
+                                         ng-model="PanNumber" ng-pattern=
+           "/^[\+]?[(]?[a-zA-Z]{5}[)]?[-\s\.]?[0-9]{4}[-\s\.]?[a-zA-z]{1}$/"
+         required/>
+                                  
+                              <!--      <span ng-show="profileInformation.pan.$touched && profileInformation.pan.$invalid "  >invalid PAN.</span> -->
+                                                                            
+                              </div>
+                                                <br>
+                                                                        
+                          </div>
+                               
+                                                              
+                                                            
+                                                            
+                                                                                        
+                                                                    
+                                                        
+                                                                
+                                                                    
+                       <div class="form-group Up">
+                                                                   
+                              <label class=" col-xs-3 " >City:</label>
+                                                                        
+                              <div class="col-xs-9">
+                                                                           
+                                  <input type="text" class="form-controler" id="city" name="city" value=""   ng-model="userCity" required/> 
+<!--                                      <span ng-show="profileInformation.city.$touched && profileInformation.city.$invalid"  >City is required.</span>                                      -->
+                              </div>
+                                            <br>
+                                                                
+                          </div> 
+                         
+                            
+                     <div class="form-group Up">
+                                                                  
+                                   <label class="col-xs-3 "for="pwd">Pincode:</label>
+                                                                                
+                                                  <div class="col-xs-9">
+                                                                                    
+                                    <input type="number" value="" name="pincode" id="pincode" class="form-controler" ng-model="PinCode" ng-pattern=
+           "/^[\+]?[(]?[1-9]{1}[)]?[-\s\.]?[0-9]{5}$/"
+           required/ > 
+<!--                         <span ng-show="profileInformation.pincode.$touched && profileInformation.pincode.$invalid "  >Pincode is required.</span>                                                       -->
+                                                  </div>
+                                 
+                                                                
+                                              </div>
+                                                     
+                                                
+                      </div>
+
+                                            
+                                                         </div>
+                     <button type="submit" class="btn btn-lg moodNav profileSubmit" ng-disabled="profileInformation.$invalid" >Submit </button>
+                                                         </form>
+                 <br>
+                 
+                  
+                </div>
+        <h2 class="profilePan"style="">Pan Details</h2>  
+     <div class="container-fluid how-it-works contentEdit">
+                                     
+                 <div class="row rowTransform" style="">
+                                        
+                     <form name="panDetails"class="form-horizontal" action="/profile" method="post">
+                                                     
+                         <div class="col-xs-12 ">
+                                                         
+                             <div class="form-group">
+                                                               
+                                 <label class=" col-xs-3" >Name:</label>
+                                                                        
+                                 <div class="col-xs-9">
+                                  <input type="text" class="form-controler" name="username" id="username" value="" > 
+                                                                        
+                                 </div>
+                                            <br>
+                                                            </div>     
+                               
+                         
+							 
+							 <div class="form-group">
+                                                                   
+                                                  
+                            		<label class=" col-xs-3"  >Address:</label>
+                                                                            
+                                                
+									<div class="col-xs-9">
+                               
+                                        <textarea class="form-controler addressSection3" rows="6" id="comment" type="text" value="" name="address" id="address" required/></textarea>                                        <span ng-show="profileInformation.address.$touched && profileInformation.address.$invalid"  >Address is required.</span>                                       
+                                                  
+                            		</div>
+                                           
+                            		<br>
+                                                                
+                          
+                                           
+                    </div>     
+                                                         
+                               <div class="form-group">
+                                                               
+                                 <label class="col-xs-3 ">City:</label>
+                                                                        
+                                 <div class="col-xs-9">
+                                  <input type="text" class="form-controler" value=""> 
+                                                                        
+                                 </div>
+                                            <br>
+                                                            </div>     
+                               
+                                           <div class="form-group ">
+                                                                  
+                                                  <label class="col-xs-3" for="pwd">Pincode:</label>
+                                                                                
+                                                  <div class="col-xs-9">
+                                                                                    
+                                                      <input type="number" name="pincode" id="pincode" class="form-controler" > 
+                                                                               
+                                                  </div>
+                                            <br>
+                                                                
+                                              </div>
+                                                                     
+                                            
+                                             <div class="form-group">
+                                                               
+                                 <label class="col-xs-3 ">Bank Name:</label>
+                                                                        
+                                 <div class="col-xs-9">
+                                  <input type="text" class="form-controler" value=""> 
+                                                                        
+                                 </div>
+                                            <br>
+                                                            </div>     <div class="form-group">
+                                                               
+                                 <label class="col-xs-3 ">Account Number:</label>
+                                                                        
+                                 <div class="col-xs-9">
+                                  <input type="text" class="form-controler" value=""> 
+                                                                        
+                                 </div>
+                                            <br>
+                                                            </div>     <div class="form-group">
+                                                               
+                                 <label class="col-xs-3 ">IFSC:</label>
+                                                                        
+                                 <div class="col-xs-9">
+                                  <input type="text" class="form-controler" value=""> 
+                                                                        
+                                 </div>
+                                            <br>
+                                                            </div>                
+                                                        
+                                              
+                                                            
+            
+                                                            
+                                                            
+                                                            
+                             <div class="form-group">
+                                          <div class="dropdown">
+                     <label class="col-xs-3" for="text"  >KYC Compliant:</label>
+                                                                               
+                                              
+                 <div class="col-xs-9 collum">
+                  	 <select class="form-controler edit selectGender" id="gender" name="gender"  ><span class="caretNext caretNext1 caret "></span>
+				 <option >Pending</option>
+    <option>Yes</option>
+  
+                            </select>
+                                              
+                                                                                                 
+                             </div>
+                                  
+                             
+                                                                   
+                         </div>        
+                                            <br>                    
+                                              
+                                              </div>     
+                
+                      <br>  
+                                                              
+                               <div class="form-group">
+                                                                   
+                              <label class="col-xs-3 " >Address Proof</label>
+                                                                        
+                              <div class="col-xs-9 ">
+                                                                           
+                          <input type="file" class="" name="somename" size="chars">
+                 
+                                                                        
+                              </div>
+                                           
+                                        <br>                                  
+                          </div> 
+                                               <br>                  
+                                                             
+                                                           
+                               <div class="form-group ">
+                                                                   
+                              <label class=" col-xs-3  " >ID Proof</label>
+                                                                        
+                              <div class="col-xs-9">
+                                                                           
+                          <input type="file" class="" name="somename" size="chars">
+                 
+                                                                        
+                              </div>
+                                            <br>
+                                                                
+                          </div> 
+                                                      <br>     
+                             <div class="form-group ">
+                                                                   
+                              <label class=" col-xs-3  " >KYC Video</label>
+                                                                        
+                              <div class="col-xs-9">
+                                                                           
+                          <input type="file" class="" name="somename" size="chars">
+                 
+                                                                        
+                              </div>
+                                            <br>
+                                                                
+                          </div> 
+                                                           
+                             <div class="form-group">
+                                                                   
+                              <label class="col-xs-3" >Signature Proof</label>
+                                                                        
+                              <div class="col-xs-9 ">
+                                                                           
+                          <input type="file" class="" name="somename" size="chars">
+                 
+                                 </div>                                         
+                              </div>
+                                            <br>  
+                                   <div class="form-group">
+                                                                   
+                              <label class="col-xs-3" >BSE Star Application</label>
+                                                                        
+                              <div class="col-xs-9 ">
+                                                                           
+                          <input type="file" class="" name="somename" size="chars">
+                 
+                                                                        
+                              </div>
+                                       
+                                      
+                         </div> <br>
+                                         <div class="form-group">
+                                                                   
+                              <label class="col-xs-3" >NACH form</label>
+                                                                        
+                              <div class="col-xs-9 ">
+                                                                           
+                          <input type="file" class="" name="somename" size="chars">
+                 
+                                                                        
+                              </div>
+                                       <br>
+                         </div>
+                                               <div class="form-group">
+                                                                   
+                              <label class="col-xs-3" >Statutory form</label>
+                                                                        
+                              <div class="col-xs-9 ">
+                                                                           
+                          <input type="file" class="" name="somename" size="chars">
+                 
+                                                                        
+                              </div>
+                                       <br>
+                         </div>
+                                                   
+                                                    
+                                           
+                                                
+                      </div>
+ <button type="submit" class="btn btn-lg moodNav profileSubmit2" ng-disabled="" >Submit </button>
+                                            
+                                                         </div>
+                                       
+                                                         </form>
+                </div>
+</div>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+        
+ <% include partials/footerMobile %> 

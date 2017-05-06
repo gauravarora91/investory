@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head %>
+    <link rel="stylesheet" href="stylesheets/updated.css">
+    <link rel="stylesheet" href="stylesheets/responsive.css">
+    <link rel="stylesheet" href="stylesheets/responsive2560.css" media="screen and (width:2560px) and (height:1600px)">
+    <script src="javascripts/sip.js"></script>
+    <!--lumpsum sohan include js file-->
+    <script src="javascripts/lumpsum.js"></script>
+</head>
+
+<body>
+    <script>
+        <%var amtrounded1 = 0;%>
+    </script>
+    <% include partials/header %>
+
+    <!--Pan Modal Window-->
+    <div class="modal fade" id="myPanModal" role="dialog">
+        <div class="modal-dialog modal-sm" style="     top: -8%;    width: 512px;margin-left: 36em;">
+            <!-- Modal content-->
+            <div class="modal-content PAN">
+                <div class="modal-body " style="">
+                    <h2 class="PANHead">Enter PAN</h2>
+
+                    <!-- <form class="formmodel PANInfo" id="checkPANStatus" name="checkPANStatus" onsubmit="checkPanStaus();">-->
+                    <div class="bg-success" id="responseData">
+                        <p id="data1"></p>
+                    </div>
+
+                    <input class="form-control PANnumber panNumber panNumber" placeholder="PAN number" type="text" id="pan" name="pan" maxlength="10" style="text-transform:uppercase">
+                    <p class="panErr" style="display: none; color: red" >Please Enter a valid Pan Number</p>
+                    <div class="dotHr loader">
+                        <button class="btn btn-lg moodNav  pricing RP1 pull-left submit submitPan" style="margin-top:10%;width:5.5em;" id="panCheck" type="submit"
+                            onclick="checkPanStaus()"> Submit </button>
+                        <p id="errMsg"></p>
+
+                        <!--</form>-->
+                    </div>
+
+
+                    <legend> PAN Details</legend>
+                    <input class="form-control PANnumber" type="text" id="panName" placeholder="Name" name="panName">
+
+                    <input class="form-control PANnumber" type="text" id="address" placeholder="Address" name="address">
+                    <input class="form-control PANnumber" type="text" id="panDOB" placeholder="Date of Birth" name="panDOB">
+                    <input class="form-control PANnumber" type="text" id="accountNumber" placeholder="Account Number" name="accountNumber">
+
+                    <input class="form-control PANnumber" type="text" id="ifscCode" placeholder="IFSC Code" name="ifscCode">
+
+                    <!--    <form action="/InsertOrders" method="post">	
+                    <button class="btn btn-lg moodNav  pricing RP1 pull-left submit " style="margin-top:2%;width:5.5em;display:none;" id="bseInvest"  type="submit">Proceed </button> 
+            </form>	
+            -->
+                    <button class="btn btn-lg moodNav  pricing RP1 pull-right submit btn-Next-Pan-Modal" style="margin-top:2%;width:5.5em; display: none" data-toggle="modal"
+                        data-target="#uploadModal" data-dismiss="modal">Next </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Upload Docs Window-->
+    <div class="modal fade" id="uploadModal" role="dialog">
+        <div class="modal-dialog modal-sm" style="     top: -8%;    width: 512px; margin-left: 36em;">
+            <!-- Modal content-->
+            <div class="modal-content PAN">
+                <div class="modal-body " style="">
+                    <h2 class="PANHead">PAN Upload Files</h2>
+
+
+                    <form action="#" method="post">
+
+                        <div class="DOCUMENTS">
+
+                            <label class="control-label" style="" title="">Address Proof</label>
+                            <input type="file" name="doc" id="file" class="inputfile" multiple />
+
+                            <!--  <label for="file" style="font-size:1em;">Choose a file</label>-->
+                            <!-- <button class="captureButton pull-right">Capture</button>-->
+                            <br/>
+                            <label class="control-label" style="" title="">ID Proof</label>
+                            <input type="file" name="doc" id="file" class="inputfile" />
+
+                            <!--<label for="file" style="font-size:1em;">Choose a file</label>-->
+                            <!-- <button class="captureButton pull-right">Capture</button>-->
+                            <br/>
+                            <label class="control-label" style="" title="">Signature Proof</label>
+                            <input type="file" name="doc" id="file" class="inputfile" />
+
+                            <!-- <label for="file" style="font-size:1em;">Choose a file</label>-->
+                            <!--<button class="captureButton pull-right">Capture</button>-->
+                            <br/>
+                            <label class="control-label" style="" title="">KYC Video</label>
+                            <input type="file" name="doc" id="file" class="inputfile" />
+
+                            <!-- <label for="file" style="font-size:1em;">Choose a file</label>-->
+                            <!--  <button class="captureButton pull-right">Capture</button>-->
+                            <br/>
+                            <label class="control-label" style="" title="">NACH</label>
+                            <input type="file" name="doc" id="file" class="inputfile" />
+
+                            <!--<label for="file" style="font-size:1em;">Choose a file</label>-->
+                            <!-- <button class="captureButton pull-right">Capture</button>-->
+                            <br/>
+                        </div>
+
+
+                    </form>
+
+                    <form action="/InsertOrders" method="post">
+                        <button class="btn btn-lg moodNav  pricing RP1 pull-left submit " style="margin-top:2%;width:5.5em;display:none;" id="bseInvest"
+                            type="submit">Proceed </button>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<section id="section1">-->
+    <div class="container-fluid moods text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="frogImageMoods text-center">
+                        <img id="setMood" class="img-responsive" src="#" alt="" />
+                        <!--                    <img class="img-responsive" src="images/frog1.png" alt="" />-->
+                        <!--<img class="img-responsive" src="images/frog_eye.png" alt="" />-->
+
+                        <h1 id="setMoodText">Feeling Rich</h1>
+                    </div>
+                    <div class="row slider">
+                        <div class="photos">
+                            <div class="photosInner">
+
+                                <img class="change" id="Broke" src="images/smallBroke.png" alt="Home view">
+
+                                <img class="change" id="Loved" src="images/smallLoved.png" alt="Home view">
+
+                                <img class="change" id="Nerdy" src="images/smallNerdy.png" alt="Home view">
+
+                                <img class="change" id="Responsible" src="images/smallResponsible.png" alt="Home view">
+
+                                <img class="change" id="Rich" src="images/smallRICH.png" alt="Home view">
+
+                                <img class="change" id="Social" src="images/smallSocial.png" alt="Home view">
+
+                            </div>
+                        </div>
+                        <div class="slider-control">
+                            <img class="left" src="images/leftArrow.png" alt="Home view">
+                            <img class="right" src="images/rightArrow.png" alt="Home view">
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <ul class="pagination">
+                            <li><a class="pageActive" href="#">1</a></li>
+                            <li><a id="pageActive" href="#">2</a></li>
+                            <li><a id="#" href="#">3</a></li>
+                            <li><a id="#" href="#">4</a></li>
+                            <li><a id="#" href="#">5</a></li>
+                        </ul>
+
+                        <div class="contentMood">
+                            <!--<p id="Indicator">
+                                
+								<span id="goalSelected">></span>
+                                <span id="rpText">></span>
+                                <span id="riskSelected"></span>
+                                <span id="yp">> Your Plan</span>
+                            </p>-->
+                                 <p id="Indicator">Goal Selection > 
+                                <span id="goalSelected"></span>
+                                <span id="rpText">> Risk Profiling ></span>
+                                <span id="riskSelected"></span>
+                                <span id="yp">> Your Plan</span>
+                            </p>
+
+
+                            <!--Tab 1-->
+                            <div class="page1">
+                                <h2>Please select your goal</h2>
+                                <p>You can always add or change a goal after you have signed up</p>
+                                <div class="col-sm-12 below">
+                                    <div class="goal" id="">
+                                        <img src="images/goals/Rich/Crorepati.png" mood="Rich" alt="Home view">
+                                        <p id="mood"><span></span>Crorepati</p>
+                                    </div>
+
+                                    <div class="goal" id="">
+                                        <img src="images/goals/Rich/Fancy%20Car.png" mood="Rich" alt="Home view">
+                                        <p id="mood"><span></span>Fancy Car</p>
+                                    </div>
+
+                                    <div class="goal" id="">
+                                        <img src="images/goals/Rich/Double%20the%20money.png" mood="Rich" alt="Home view">
+                                        <p id="mood"><span></span>Double the money</p>
+                                    </div>
+                                </div><div class="clearfix"></div>
+                                <div class="worksBtn">
+                                    <!--<div class="login-btn text-center page-buttons">
+                                        <button type="" class="btn btn-lg moodNav skip" > Skip </button>
+                                    </div>-->
+                                    <div class="btn-hr-wrapper clean">
+                                        <button type="" class="btn btn-lg moodNav next pull-left" disabled="disabled"> Next </button><div class="clearfix"></div>
+                                    </div>
+                                    <div class="login-btn text-center page-buttons"></div>
+                                </div><div class="clearfix"></div>
+                            </div>
+
+                            <!--Tab 2-->
+                            <div class="page2" style="display: none; text-align: left; padding: 10px 0 15px">
+                                <p style="display: inline-block;vertical-align: bottom; margin-right: 47px">I need INR <input style="box-shadow: -2px 5px 0px -3px #333; border: 0"name="amount" id="amount" placeholder="" min="1000" max="10000000" value="" />
+                                <!-- <span ng-show="signUpForm.mnumber.$touched && signUpForm.mnumber.$invalid">Phone number is invalid.</span>-->
+                                in<input style="margin: 0 10px; width: 50px;padding:0px"class="blankInput" type="number" min="1" max="50" placeholder="" id="time" value="" /> (Years)</p>
+                                <div  style="display: inline-block">
+                                    <button type="button" id="go" class="btn btn-lg moodNav go"> Go </button>
+                                    <button type="" class="btn btn-lg moodNav next page3Sub"> Next </button>
+                                    <!--<button type="" class="btn btn-lg moodNav save page3Sub" > Save </button>-->
+                                </div>
+                                <p class="page2VldMsg" style="color: red; display: none;">Monthly Investment should be minimum INR 1000</p>
+                                <p class="page2VldMsg2" style="color: red; display: none;">Please Select years between 1 t0 50</p>
+                                <div class="dotHr"></div>
+                            </div>
+
+                            <!--Tab 3-->
+                            <div class="page3" style="display: none">
+                                <p>So, you need to invest INR <span id="invest"></span> Monthly</p>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Allocation percent</th>
+                                                <th>Amount (&#x20B9;)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td>Equity</td>
+                                                <td id="eqPer">0%</td>
+                                                <td id="eqAmt">NA</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>Hybrid</td>
+                                                <td id="hybPer">0% </td>
+                                                <td id="hybAmt">NA</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>Debt</td>
+                                                <td id="debPer">0%</td>
+                                                <td id="debAmt">NA</td>
+                                            </tr>
+                                            <tfoot >
+                                            <tr style="border:4px solid black;">
+                                                <th style="text-align:right; font-size:1em;font-weight:900;" colspan="2">Total :</th>
+                                                <td id="total" style="font-size:1em;font-weight:900;"></td>
+                                            </tr>
+                                        </tfoot>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p style="text-align: center;">* Risk Profile - Conservative</p>
+                            </div>
+
+                            <!--Tab 4-->
+                            <div class="page4" style="display: none">
+                                <p id="invest">You need to invest INR <span id="invest2"></span> monthly in Conservative mode.</p>
+                                <!--<h2>Risk Profiling</h2>-->
+                                <p><em>Risk profiling will help you choose right fund to invest in based on your comfort</em></p>
+                                <div class="selectMode">
+                                    <div class="dotHr">
+                                        <a href="#" class="tooltips">
+                                            <button id="Conservative" type="" class="btn btn-lg moodNav" profile="c" onclick="setProfile(0,2,1)"> Conservative </button>
+                                            <span id="c">I am a low risk taker. When I hear the word Risk, I think of the danger it represents. When faced with a financial decision, I am always concerned of the possible losses. I would be satisfied if I got returns similar to FDs. I would be concerned with any loss on my portfolio in the short term even if the investments are for the long term.</span>
+                                        </a>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <a href="#" class="tooltips">
+                                            <button id="Moderate" type="" class="btn btn-lg moodNav" profile="m" onclick="setProfile(1,2,1)"> Moderate </button>
+                                            <span id="m">I am an average risk taker. When I hear the word Risk, I think of the uncertainty it represents. When faced with a financial decision, I am usually concerned of the possible losses. I would be satisfied if I got returns slightly higher than FDs. I would be concerned with a small loss on my portfolio in the short term even if the investments are for the long term.</span>
+                                        </a>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <a href="#" class="tooltips">
+                                            <button id="Aggressive" type="" class="btn btn-lg moodNav" profile="a" onclick="setProfile(2,2,1)"> Aggressive </button>
+                                            <span id="a">I am a high risk taker. When I hear the word Risk, I think of the opportunity it represents. When faced with a financial decision, I am concerned of the possible gains. I would be satisfied if I got returns which are much higher when compared to FDs. I would not be concerned with any loss on my portfolio in the short term even if the investments are for the long term.</span>
+                                        </a>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div id="moodPagination"></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <a href="#" class="tooltips">
+                                            <button id="dontKnow" type="" profile="d" class="btn btn-lg moodNav ">I don't know</button>
+                                            <span id="d">Click to know your Risk Profile.</span>
+                                        </a>
+                                    </div>
+                                </div><div class="clearfix"></div>
+
+                                <div class="sub-page4">
+                                    <div class="sliderRiskProfile">
+                                        <div id="riskHeight">
+                                            <button class="accordion">
+                                                <div class="col-sm-1 btn btn-default btn-circle">1</div>
+                                                <div class="col-sm-11"> <label for="Q1" id="1">Compared to others, how do you rate your willingness to take financial risks?</label></div>
+                                            </button>
+                                            <div class="riskProfiling">
+                                                <label id="mood">  <input type="Radio" id="Q1" name="Q1" value="0" >Low risk taker</label>
+                                                <label id="mood"><input type="Radio" id="Q1" name="Q1" value="1" >Average risk taker</label>
+                                                <label id="mood"> <input type="Radio" id="Q1" name="Q1"  value="2">High risk taker</label>
+                                            </div>
+                                            <button class="accordion">
+                                                <div class="col-sm-1 btn btn-default btn-circle">2</div>
+                                                <div class="col-sm-11"><label for="Q2">When you think of the word 'risk' in a financial context, which of the following words come to mind first?</label></div>
+                                            </button>
+                                            <div class="riskProfiling">
+                                                <label id="mood"> <input type="Radio" id="Q2" name="Q2"  value="0" >Danger</label>
+                                                <label id="mood"><input type="Radio" id="Q2" name="Q2"  value="1" >Uncertainty</label>
+                                                <label id="mood"> <input type="Radio" id="Q2"  name="Q2" value="2">Opportunity</label>
+                                            </div>
+                                            <button class="accordion">
+                                                <div class="col-sm-1 btn btn-default btn-circle">3</div>
+                                                <div class="col-sm-11">  <label for="Q3">When faced with a major financial decision, are you most concerned about the possible losses or the possible gains?</label></div>
+                                            </button>
+                                            <div class="riskProfiling">
+                                                <label id="mood"> <input type="Radio" id="Q3" name="Q3" value="0" >Always the possible losses</label>
+                                                <label id="mood"><input type="Radio" id="Q3" name="Q3"  value="1" >Usually the possible losses</label>
+                                                <label id="mood"> <input type="Radio" id="Q3" name="Q3"  value="2">Always the possible gains</label>
+                                            </div>
+                                            <button class="accordion">
+                                                <div class="col-sm-1 btn btn-default btn-circle">4</div>
+                                                <div class="col-sm-11"><label for="Q4">Think of the average return you would expect to earn on an investment portfolio over a fixed deposit the next ten years.</label></div>
+                                            </button>
+                                            <div class="riskProfiling">
+                                                <label id="mood"><input type="Radio" id="Q4" name="Q4" value="0" >About the same rate as from bank fixed deposits</label>
+                                                <label id="mood"><input type="Radio" id="Q4" name="Q4"  value="1" >About one and half time the rate from bank fixed deposits</label>
+                                                <label id="mood"><input type="Radio" id="Q4" name="Q4"  value="2">About twice the rate from bank fixed deposits</label>
+                                            </div>
+                                            <button class="accordion">
+                                                <div class="col-sm-1 btn btn-default btn-circle">5</div>
+                                                <div class="col-sm-11"><label for="Q5">Which of the following statement best describes your attitude about the next six month's performance of the investment?</label></div>
+                                            </button>
+                                            <div class="riskProfiling">
+                                                <label id="mood"><input type="Radio" id="Q5" name="Q5"  value="0" >I would have a concern with any sort of loss</label>
+                                                <label id="mood"><input type="Radio" id="Q5" name="Q5"  value="1" >I'd get concerned if the loss was greater than 10%</label>
+                                                <label id="mood"><input type="Radio" id="Q5" name="Q5"  value="2">I wouldn't worry about losses in that time frame</label>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    <div class="worksBtn">
+                                        <div class="btn-hr-wrapper clean" style="margin-top: 16px ">
+                                            <button type="" class="btn btn-lg moodNav done pull-left " onclick="myScore();" disabled="disabled"> Done </button><div class="clearfix"></div>
+                                        </div>
+                                        <div class="login-btn text-center page-buttons">
+                                            <!--<button type="" class="btn btn-lg moodNav save " > Save </button>-->
+                                        </div>
+                                        <div class="login-btn text-center page-buttons"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Tab 5-->
+                            <div class="page5" style="display: none">
+                                <p>So, you need to invest INR <span id="invest1"></span> Monthly</p>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr><th>Category</th>
+                                                <th>Allocation %</th>
+                                                <th>Amount (&#x20B9;)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Equity</td>
+                                                <td id="eqPer1">0%</td>
+                                                <td id="eqAmt1">NA</td>
+                                            </tr>
+                                            <tr><td>Hybrid</td>
+                                                <td id="hybPer1">0% </td>
+                                                <td id="hybAmt1">NA</td>
+                                            </tr>
+                                            <tr><td>Debt</td>
+                                                <td id="debPer1">0%</td>
+                                                <td id="debAmt1">NA</td>
+                                            </tr>
+                                            <tfoot>
+                                            <tr>
+                                               <th style="text-align:right; font-size:1em;font-weight:900;" colspan="2">Total :</th>
+                                                <td id="total1" style="font-size:1em;font-weight:900;"></td>
+                                            </tr>
+                                            </tfoot>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btn-hr-wrapper clean showDataSchemes">
+                                    <% if(loggedIn && paid){ %>
+                                        <button type="submit" class="btn btn-lg moodNav signUp pull-left" id="schemeNext"> Next </button>
+                                    <%  } else if(loggedIn && !paid) { %>
+                                        <form action="/Pricing" method="get">
+                                            <button type="submit" class="btn btn-lg moodNav signUp pull-left">Pay </button>
+                                        </form>
+                                    <%  } else { %>
+                                        <button type="" data-toggle="modal" data-target="#loginModal" class="btn btn-lg moodNav signUp pull-left"> login </button>
+                                    <% } %>
+                                <div class="clearfix"></div></div>
+                            </div>
+
+                            <!--Tab 6-->
+                            <% if(paid) {%>
+                            <div class="page6" style="display: none">
+                                <button type="" data-toggle="modal" data-target="#myPanModal" class="btn btn-lg moodNav go" id="initInvest" style="top: 25px;"> Invest </button>
+                                <p>So, you need to invest INR <span id="invest1"><%= assetFromDb.sip %></span>                                                        Monthly</p>
+                                <div class="table-responsive">
+                                <table class="table">
+                                    <tr id="showDataSchemes">
+                                        <th style="  border-top: 0; border-right: 1px solid #35BFD3; border-bottom: 1px solid #35BFD3;">Scheme Name</th>
+                                        <th style="  border-top: 0; border-right: 1px solid #35BFD3; border-bottom: 1px solid #35BFD3;">Category</th>
+                                        <th style="  border-top: 0; border-bottom: 1px solid #35BFD3;">Amount (&#x20B9;)</th>
+                                    </tr>
+
+                                    <% for(i=0;i<asetDataDetail.length;i++) {%>
+                                    <tr>
+                                        <td><%=schemeData[i].allocationdescription %></td>
+                                        <td><%=schemeData[i].allocationcategory %></td>
+                                        <td><%=schemeData[i].allocationamount %></td>
+                                    </tr>
+                                    <%}%>
+                                     <tfoot>
+                                            <tr>
+                                               <th style="text-align:right; font-size:1em;font-weight:900;" colspan="2">Total :</th>
+                                                <td style="font-size:1em;font-weight:900;"><%= assetFromDb.sip %></td>
+                                            </tr>
+                                            </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+
+                            <!--Tab 7-->
+                            <div class="page7" style="display: none">
+                                <p>So, you need to invest INR <span id="invest1"></span> Monthly</p>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Allocation %</th>
+                                                <th>Amount (&#x20B9;)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Equity</td>
+                                                <td id="eqPer1">25%</td>
+                                                <td id="eqAmt1">NA</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hybrid</td>
+                                                <td id="hybPer1">10% </td>
+                                                <td id="hybAmt1">NA</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Debt</td>
+                                                <td id="debPer1">65%</td>
+                                                <td id="debAmt1">NA</td>
+                                            </tr>
+                                             <tfoot>
+                                            <tr>
+                                              <th style="text-align:right; font-size:1em;font-weight:900;" colspan="2">Total :</th>
+                                                <td id="total1" style="font-size:1em;font-weight:900;"></td>
+                                            </tr>
+                                            </tfoot>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="dotHr">
+                                    <div class="login-btn">
+                                <% if(loggedIn && paid){ %>
+                                        <button type="submit" class="btn btn-lg moodNav signUp" id="schemeNext"> Next </button>
+                                <%  } else if(loggedIn && !paid) { %>
+                                        <form action="/Pricing" method="get">
+                                            <button type="submit" class="btn btn-lg moodNav signUp">Pay </button>
+                                        </form>
+                                <%  } else { %>
+                                            <button type="" data-toggle="modal" data-target="#loginModal" class="btn btn-lg moodNav signUp"> login </button>
+                                <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <%# if(paid) {%>
+                            </div>
+
+                            <%}%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    </section>-->
+
+    <!--Footer-->
+    <div id="" class="container-fluid footFixer">
+        <% include partials/footer %>
+    </div>
+        
+    <!--Custom Js links -->
+    <script>
+        var goalNameFromControl;
+        function goalName(name) {
+            goalNameFromControl = name;
+            console.log(name);
+        }
+
+
+        var rp;
+        function showRiskProfile(riskProfile) {
+            rp = riskProfile;
+
+
+        }
+        var once = true;
+        var store = false;
+
+        function inserToBSE() {
+
+            var data = {};
+            data.pan = document.getElementById("pan").value;
+            console.log("pan" + data.pan);
+            //   alert(data.pan);
+
+            <% if(loggedIn) {%>
+                
+                $.ajax({
+                    type: 'POST',
+                    data: JSON.stringify(data),
+                    contentType: 'application/json',
+                    url: '/InsertOrders',
+                    success: function (data) {
+                        console.log('success');
+                        bseDisp = true;
+
+                        // console.log(JSON.stringify(data));
+                    }
+
+                })
+                <% }%>
+                
+            
+        }
+    
+        
+        function checkPanStaus() {
+            if($('.panNumber').val().length == 10){
+                $('.panErr').slideUp();
+                $('.btn.pricing.RP1.submitPan').parent().html('<img src = "images/loader.gif" >');
+                var data = {};
+                data.pan = document.getElementById("pan").value;
+                console.log("pan" + data.pan);
+                //alert(data.pan);
+
+                <% if(loggedIn) {%>
+                    
+                    $.ajax({
+                        type: 'POST',
+                        data: JSON.stringify(data),
+                        contentType: 'application/json',
+                        url: '/PANValidation',
+                        success: function (data) {
+                            // console.log('success');
+                            $("#myPanModal .loader").html('');
+                            var myObj = JSON.parse(data);
+
+                            //document.getElementById("responseData").style.display='none';
+                            document.getElementById("bseInvest").style.display = 'block';
+                            document.getElementById("pan").style.display = 'none';
+                            // document.getElementById("panCheck").style.display = 'none';
+
+                            var displayMsg = "Hi " + myObj.name + " your PAN No. " + myObj.pan + " is " + myObj.msg;
+                            document.getElementById("data1").innerHTML = displayMsg;
+                            $('.btn-Next-Pan-Modal').css('display', 'block');
+                        }
+                    })
+                    <% }%>
+            } else {
+                $('.panErr').slideDown();
+            }
+
+        }
+        
+        
+        function storeAssets(goalName, riskProfile, masterAmount, totalYears, sip, alloc1, amt1, alloc2, amt2, alloc3, amt3) {
+
+            if (once && store) {
+                if (localStorage.sipInvestment || localStorage.lumpsumInvestment) {
+                    var data = {};
+                    data.goalName = "Crorepati";
+                    data.riskProfile = riskProfile;
+                    data.masterAmount = masterAmount;
+                    data.totalYears = totalYears;
+                    data.sip = sip;
+                    data.equityAmount = amt1;
+                    data.hybridAmount = amt2;
+                    data.debtAmount = amt3;
+                    data.equityPercentage = alloc1;
+                    data.hybridPercentage = alloc2;
+                    data.debtPercentage = alloc3;
+                    if (localStorage.lumpsumInvestment) {
+                        data.lumpsum = localStorage.lumpsumInvestment;
+                    }
+                } else {
+                    var data = {};
+                    data.goalName = goalNameFromControl;
+                    data.riskProfile = riskProfile;
+                    data.masterAmount = masterAmount;
+                    data.totalYears = totalYears;
+                    data.sip = sip;
+                    data.equityAmount = amt1;
+                    data.hybridAmount = amt2;
+                    data.debtAmount = amt3;
+                    data.equityPercentage = alloc1;
+                    data.hybridPercentage = alloc2;
+                    data.debtPercentage = alloc3;
+                }
+                <% if(loggedIn) {%>
+                // debugger;
+                    $.ajax({
+                        type: 'POST',
+                        data: JSON.stringify(data),
+                        contentType: 'application/json',
+                        url: '/SavedPlansHeader',
+                        success: function (data) {
+                            // debugger;
+                            console.log('success');
+                            //var myObj = JSON.parse(data);
+                            //alert(data[1][0]);
+                            $(".page6 #invest1").html(sip);
+                             $(".page6 #total1").html(sip);
+                            $(".page6 .table tbody > tr").not('#showDataSchemes').empty();
+                            // debugger;
+                            for (i = 0; i < data[0].length; i++) {
+                                var txt1 = "<tr><td>" + data[0][i].name + "</td><td>" + data[0][i].category + "</td><td>" + data[1][i] + "</td></tr>";
+                                $("#showDataSchemes").after(txt1);
+                            }
+                        }
+                        //console.log(data[0].name);
+
+                    })
+                    <% }else { %>
+
+                    
+                        $.ajax({
+                            type: 'POST',
+                            data: JSON.stringify(data),
+                            contentType: 'application/json',
+                            url: '/setData',
+                            success: function (data) {
+                                console.log('success');
+                                $("#myPanModal").modal("show");
+
+                                // console.log(JSON.stringify(data));
+                            }
+
+                        })
+
+
+                        <%}%>
+                
+                            once= false;
+            }
+        }
+
+
+        function setForScheme(riskProfile, sip, amt1, amt2, amt3) {
+
+            var noOfYears = document.getElementById("time").value;
+
+
+
+        }
+
+        function myinit(riskRate, chooseTable, storeAllocation) {
+            // alert(localStorage.sipInvestment);
+            /*lumpsum sohan start -- the alert is removed and else if for lumpsum is included.*/
+            if (storeAllocation == 1)
+                store = true;
+            else
+                store = false;
+
+            if (localStorage.lumpsumInvestment) {
+
+
+                var riskProfile = riskRate;
+                var t = chooseTable;
+                var rate = 10;
+                var per = 12;
+                var totalYears = localStorage.lumpYears;
+                /*var nper=totalYears*per;
+                var pv=0;*/
+                var fv = localStorage.lumpsum;
+                var mn = 0;
+
+                if (riskProfile == "Conservative") {
+
+                    var alloc1 = 0;
+                    var alloc2 = 0;
+                    var alloc3 = 100;
+
+                    var amt1 = 0;
+                    var amt2 = 0;
+                    var amt3 = fv;
+
+                    document.getElementById("eqAmt" + t).innerHTML = amt1;
+                    document.getElementById("hybAmt" + t).innerHTML = amt2;
+                    document.getElementById("debAmt" + t).innerHTML = amt3;
+                 
+                    
+
+                    document.getElementById("eqPer" + t).innerHTML = alloc1 + "%";
+                    document.getElementById("hybPer" + t).innerHTML = alloc2 + "%";
+                    document.getElementById("debPer" + t).innerHTML = alloc3 + "%";
+
+                    storeAssets("Broke", riskProfile, fv, totalYears, mn, alloc1, amt1, alloc2, amt2, alloc3, amt3);
+
+                } else if (riskProfile == "Moderate") {
+
+                    var alloc1 = 0;
+                    var alloc2 = 100;
+                    var alloc3 = 0;
+
+                    var amt1 = 0;
+                    var amt2 = fv;
+                    var amt3 = 0;
+
+                    document.getElementById("eqAmt" + t).innerHTML = amt1;
+                    document.getElementById("hybAmt" + t).innerHTML = amt2;
+                    document.getElementById("debAmt" + t).innerHTML = amt3;
+                  
+
+                    document.getElementById("eqPer" + t).innerHTML = alloc1 + "%";
+                    document.getElementById("hybPer" + t).innerHTML = alloc2 + "%";
+                    document.getElementById("debPer" + t).innerHTML = alloc3 + "%";
+
+                    storeAssets("Broke", riskProfile, fv, totalYears, mn, alloc1, amt1, alloc2, amt2, alloc3, amt3);
+
+                } else {
+                    var alloc1 = 100;
+                    var alloc2 = 0;
+                    var alloc3 = 0;
+
+                    var amt1 = fv;
+                    var amt2 = 0;
+                    var amt3 = 0;
+
+                    document.getElementById("eqAmt" + t).innerHTML = amt1;
+                    document.getElementById("hybAmt" + t).innerHTML = amt2;
+                    document.getElementById("debAmt" + t).innerHTML = amt3;
+                   
+                  
+                    
+                    document.getElementById("eqPer" + t).innerHTML = alloc1 + "%";
+                    document.getElementById("hybPer" + t).innerHTML = alloc2 + "%";
+                    document.getElementById("debPer" + t).innerHTML = alloc3 + "%";
+
+                    storeAssets("Broke", riskProfile, fv, totalYears, mn, alloc1, amt1, alloc2, amt2, alloc3, amt3);
+                }
+
+
+            } else {
+
+
+                if (localStorage.sipInvestment) {
+
+
+                    var riskProfile = riskRate;
+                    var t = chooseTable;
+                    var rate = 10;
+                    var per = 12;
+                    var totalYears = localStorage.years;
+                    var nper = totalYears * per;
+                    var pv = 0;
+                    var fv = localStorage.sip * nper;
+                    var mn = localStorage.sip;
+
+                }
+                else {
+
+                    var riskProfile = riskRate;
+                    var t = chooseTable;
+                    var rate = 10;
+                    var per = 12;
+                    var totalYears = document.getElementById("time").value;
+                    var nper = totalYears * per;
+                    var pv = 0;
+                    var fv = document.getElementById("amount").value;
+                    //document.getElementById("amountMaster").value = fv;
+
+                    //if number of years is less then 3 year debt is 100
+                    var mn = Math.round(pmt(10, 12, nper, pv, -fv) / 1000) * 1000;
+
+                }
+                console.log(riskProfile + nper);
+
+                try {
+                    if (!loggedIn) {
+                        var tempGoals = JSON.parse(sessionStorage.getItem("tempGoals"));
+                        if(tempGoals == undefined) {
+                            tempGoals = {};
+                        }
+                        tempGoals.mn = mn;
+                        sessionStorage.setItem('tempGoals', JSON.stringify(tempGoals));
+                    }
+                } catch(e) {
+                    console.log("Session Storage thing didn't work >>> "+ e );
+                }
+
+                console.log(sessionStorage.getItem("tempGoals"));
+                $("#invest").html(mn).promise().done(function() {
+                    if( $('#invest').html() >= 1000 ) {
+                        $('.page2VldMsg').slideUp();
+                    } else {
+                        $('.page2VldMsg').slideDown();
+                    }
+                });
+                document.getElementById("invest2").innerHTML = mn;
+                document.getElementById("total").innerHTML = mn;
+                document.getElementById("total1").innerHTML = mn;
+                
+                if (nper < 37) {
+
+                    var eqP = 0;
+                    var hybP = 0;
+                    var debtP = 1;
+
+                    var eqMP = 0;
+                    var hybMP = 0;
+                    var debtMP = 1;
+
+                    var eqAP = 0;
+                    var hybAP = 0;
+                    var debtAP = 1;
+
+                }
+
+                else if (nper > 24 && mn <= 2000) {
+
+                    var eqP = 0;
+                    var hybP = 1;
+                    var debtP = 0;
+
+                    var eqMP = 0;
+                    var hybMP = 1;
+                    var debtMP = 0;
+
+                    var eqAP = 0;
+                    var hybAP = 1;
+                    var debtAP = 0;
+
+                } else {
+                    /*Conservative*/
+                    var eqP1 = <%=data[0].asset.value %>;
+                    var hybP1 = <%=data[1].asset.value %>;
+                    var debtP1 = <%=data[2].asset.value %>;
+            
+                    var eqP = eqP1 / 100;
+                    var hybP = hybP1 / 100;
+                    var debtP = debtP1 / 100;
+
+                    //Moderate
+                    var eqMP1 = <%=data[3].asset.value %>;;
+                    var hybMP1 = <%=data[4].asset.value %>;;
+                    var debtMP1 = <%=data[5].asset.value %>;;
+
+                    var eqMP = eqMP1 / 100;
+                    var hybMP = hybMP1 / 100;
+                    var debtMP = debtMP1 / 100;
+
+                    //*Aggressive*/
+                    var eqAP1 = <%=data[6].asset.value %>;;
+                    var hybAP1 = <%=data[7].asset.value %>;;
+                    var debtAP1 = <%=data[8].asset.value %>;;
+
+                    var eqAP = eqAP1 / 100;
+                    var hybAP = hybAP1 / 100;
+                    var debtAP = debtAP1 / 100;
+
+
+                }
+
+                if (riskProfile == "Conservative") {
+
+                    var amt1 = Math.round((eqP * mn) / 1000) * 1000;
+                    var amt2 = Math.round((hybP * mn) / 1000) * 1000;
+                    var amt3 = Math.round((debtP * mn) / 1000) * 1000;
+                    var total = amt1 + amt2 + amt3;
+
+                    if (mn > total) {
+                        var mean = mn - total;
+                        amt2 = amt2 + mean;
+                        var mean2 = total + mean;
+
+                    } else if (total > mn) {
+
+                        var mean = total - mn;
+                        amt2 = amt2 - mean;
+                        var mean2 = total - mean;
+
+                    }
+                    else {
+                        mean2 = total;
+                    }
+
+                    if (!loggedIn) {
+                        var tempGoals = JSON.parse(sessionStorage.getItem("tempGoals"));
+                        tempGoals.amt1 = amt1;
+                        tempGoals.amt2 = amt2;
+                        tempGoals.amt3 = amt3;
+                    
+                        sessionStorage.setItem('tempGoals', JSON.stringify(tempGoals));
+                        console.log(sessionStorage.getItem("tempGoals"));
+                    }
+
+                    document.getElementById("eqAmt" + t).innerHTML = amt1;
+                    document.getElementById("hybAmt" + t).innerHTML = amt2;
+                    document.getElementById("debAmt" + t).innerHTML = amt3;
+                   // document.getElementById("total1").innerHTML = amt3+amt2+amt1;
+
+                    var alloc1 = Math.round((amt1 / mean2) * 100);
+                    var alloc2 = Math.round((amt2 / mean2) * 100);
+                    var alloc3 = Math.round((amt3 / mean2) * 100);
+
+                    var alloc4 = alloc1 + alloc2 + alloc3;
+
+
+                    if (alloc4 == 100) {
+
+                    }
+                    else if (alloc4 > 100) {
+
+                        allo = Math.max(alloc1, alloc2, alloc3);
+                        if (allo == alloc1) {
+                            alloc1 = alloc1 - 1;
+                        }
+                        else if (allo == alloc2) {
+                            alloc2 = alloc2 - 1;
+                        }
+                        else
+                            alloc3 = alloc3 - 1
+                    }
+
+
+                    else {
+                        allo = Math.max(alloc1, alloc2, alloc3);
+                        if (allo == alloc1) {
+                            alloc1 = alloc1 + 1;
+                        }
+                        else if (allo == alloc2) {
+                            alloc2 = alloc2 + 1;
+                        }
+                        else
+                            alloc3 = alloc3 + 1
+                    }
+
+
+                    if (!loggedIn) {
+                        var tempGoals = JSON.parse(sessionStorage.getItem("tempGoals"));
+                        tempGoals.alloc1 = alloc1;
+                        tempGoals.alloc2 = alloc2;
+                        tempGoals.alloc3 = alloc3;
+                        sessionStorage.setItem('tempGoals', JSON.stringify(tempGoals));
+                        console.log(sessionStorage.getItem("tempGoals"));
+                    }
+                    document.getElementById("eqPer" + t).innerHTML = alloc1 + "%";
+                    document.getElementById("hybPer" + t).innerHTML = alloc2 + "%";
+                    document.getElementById("debPer" + t).innerHTML = alloc3 + "%";
+
+                    setForScheme(riskProfile, mn, amt1, amt2, amt3);
+                    storeAssets("Broke", riskProfile, fv, totalYears, mn, alloc1, amt1, alloc2, amt2, alloc3, amt3);
+
+                }
+                else if (riskProfile == "Moderate") {
+
+
+                    //Moderate calculations
+
+
+
+                    var amtM1 = Math.round((eqMP * mn) / 1000) * 1000;
+                    var amtM2 = Math.round((hybMP * mn) / 1000) * 1000;
+                    var amtM3 = Math.round((debtMP * mn) / 1000) * 1000;
+
+                    var totalM = amtM1 + amtM2 + amtM3;
+
+                    if (mn > totalM) {
+                        var mean = mn - totalM;
+                        amtM2 = amtM2 + mean;
+                        var mean3 = totalM + mean;
+
+                    }
+                    else if (totalM > mn) {
+
+                        var mean = totalM - mn;
+                        amtM2 = amtM2 - mean;
+                        var mean3 = totalM - mean;
+
+                    }
+
+                    else {
+                        mean3 = totalM;
+                    }
+
+
+
+                    if (!loggedIn) {
+                        var tempGoals = JSON.parse(sessionStorage.getItem("tempGoals"));
+                        tempGoals.amt1 = amtM1;
+                        tempGoals.amt2 = amtM2;
+                        tempGoals.amt3 = amtM3;
+                        sessionStorage.setItem('tempGoals', JSON.stringify(tempGoals));
+                        console.log(sessionStorage.getItem("tempGoals"));
+                    }
+                    document.getElementById("eqAmt" + t).innerHTML = amtM1;
+                    document.getElementById("hybAmt" + t).innerHTML = amtM2;
+                    document.getElementById("debAmt" + t).innerHTML = amtM3;
+
+                   // document.getElementById("total1").innerHTML = amt3+amt2+amt1;
+                    var allocM1 = Math.round((amtM1 / mean3) * 100);
+                    var allocM2 = Math.round((amtM2 / mean3) * 100);
+                    var allocM3 = Math.round((amtM3 / totalM) * 100);
+
+                    var allom4 = allocM1 + allocM2 + allocM3;
+                    var allo1;
+                    if (allom4 == 100) {
+
+                    }
+                    else if (allom4 > 100) {
+
+                        allo1 = Math.max(allocM1, allocM2, allocM3);
+                        if (allo1 == allocM1) {
+                            allocM1 = allocM1 - 1;
+                        }
+                        else if (allo1 == allocM2) {
+                            allocM2 = allocM2 - 1;
+                        }
+                        else
+                            allocM3 = allocM3 - 1
+                    }
+
+
+                    else {
+                        allo1 = Math.max(allocM1, allocM2, allocM3);
+                        if (allo1 == allocM1) {
+                            allocM1 = allocM1 + 1;
+                        }
+                        else if (allo1 == allocM2) {
+                            allocM2 = allocM2 + 1;
+                        }
+                        else
+                            allocM3 = allocM3 + 1
+                    }
+
+
+
+
+                    if (!loggedIn) { 
+                        var tempGoals = JSON.parse(sessionStorage.getItem("tempGoals"));
+                       tempGoals.alloc1 = allocM1;
+                        tempGoals.alloc2 = allocM2;
+                        tempGoals.alloc3 = allocM3;
+                        sessionStorage.setItem('tempGoals', JSON.stringify(tempGoals));
+                        console.log(sessionStorage.getItem("tempGoals"));
+                    }
+                    document.getElementById("eqPer" + t).innerHTML = allocM1 + "%";
+                    document.getElementById("hybPer" + t).innerHTML = allocM2 + "%";
+                    document.getElementById("debPer" + t).innerHTML = allocM3 + "%";
+
+                    setForScheme(riskProfile, mn, amtM1, amtM2, amtM3);
+                    storeAssets("Broke", riskProfile, fv, totalYears, mn, allocM1, amtM1, allocM2, amtM2, allocM3, amtM3);
+                }
+                else {
+
+
+                    //Aggressive profile
+
+                    var amtA1 = Math.round((eqAP * mn) / 1000) * 1000;
+                    var amtA2 = Math.round((hybAP * mn) / 1000) * 1000;
+                    var amtA3 = Math.round((debtAP * mn) / 1000) * 1000;
+
+
+
+
+
+                    var totalA = amtA1 + amtA2 + amtA3;
+
+
+
+                    if (totalA > mn) {
+                        var mean = totalA - mn;
+                        amtA2 = amtA2 - mean;
+                        var mean4 = totalA - mean;
+
+                    }
+                    else {
+                        mean4 = totalA;
+                    }
+
+                    if (!loggedIn) {
+                        var tempGoals = JSON.parse(sessionStorage.getItem("tempGoals"));
+                        tempGoals.amt1 = amtA1;
+                        tempGoals.amt2 = amtA2;
+                        tempGoals.amt3 = amtA3;
+                        sessionStorage.setItem('tempGoals', JSON.stringify(tempGoals));
+                        console.log(sessionStorage.getItem("tempGoals"));
+                    }
+                    document.getElementById("eqAmt" + t).innerHTML = amtA1;
+                    document.getElementById("hybAmt" + t).innerHTML = amtA2;
+                    document.getElementById("debAmt" + t).innerHTML = amtA3;
+
+                    //  document.getElementById("total1").innerHTML = amt3+amt2+amt1;
+                    var allocA1 = Math.round((amtA1 / mean4) * 100);
+                    var allocA2 = Math.round((amtA2 / mean4) * 100);
+                    var allocA3 = Math.round((amtA3 / totalA) * 100);
+
+                    var alloA4 = allocA1 + allocA2 + allocA3;
+                    var allo2;
+                    if (alloA4 == 100) {
+
+                    }
+                    else if (alloA4 > 100) {
+
+                        allo2 = Math.max(allocA1, allocA2, allocA3);
+                        if (allo2 == allocA1) {
+                            allocA1 = allocA1 - 1;
+                        }
+                        else if (allo2 == allocA2) {
+                            allocA2 = allocA2 - 1;
+                        }
+                        else
+                            allocA3 = allocA3 - 1
+                    }
+
+
+                    else {
+                        allo2 = Math.max(allocA1, allocA2, allocA3);
+                        if (allo2 == allocA1) {
+                            allocA1 = allocA1 + 1;
+                        }
+                        else if (allo2 == allocA2) {
+                            allocA2 = allocA2 + 1;
+                        }
+                        else
+                            allocA3 = allocA3 + 1
+                    }
+
+
+                    if (!loggedIn) {
+                        var tempGoals = JSON.parse(sessionStorage.getItem("tempGoals"));
+                        tempGoals.alloc1 = allocA1;
+                        tempGoals.alloc2 = allocA2;
+                        tempGoals.alloc3 = allocA3;
+                        sessionStorage.setItem('tempGoals', JSON.stringify(tempGoals));
+                        console.log(sessionStorage.getItem("tempGoals"));
+                    }
+
+                    document.getElementById("eqPer" + t).innerHTML = allocA1 + "%";
+                    document.getElementById("hybPer" + t).innerHTML = allocA2 + "%";
+                    document.getElementById("debPer" + t).innerHTML = allocA3 + "%";
+
+                    setForScheme(riskProfile, mn, amtA1, amtA2, amtA3);
+                    storeAssets("Broke", riskProfile, fv, totalYears, mn, allocA1, amtA1, allocA2, amtA2, allocA3, amtA3);
+                }
+
+
+
+                // storeAssets(goal,riskprofile, fv, time, sip, amtA1, amtA)
+
+
+            }
+
+
+            // console.log(  Math.round(pmt(10,12,24,0,-50000)/1000)*1000);
+
+
+            // Function to calculate Periodic Payments.
+        }
+        function pmt(rate, per, nper, pv, fv) {
+
+            fv = parseFloat(fv);
+
+            nper = parseFloat(nper);
+
+            pv = parseFloat(pv);
+
+            per = parseFloat(per);
+
+            if ((per == 0) || (nper == 0)) {
+
+                // alert("Why do you want to test me with zeros?");
+
+                return (0);
+
+            }
+
+            rate = eval((rate) / (per * 100));
+
+            if (rate == 0) // Interest rate is 0
+
+            {
+
+                pmt_value = - (fv + pv) / nper;
+
+            }
+
+            else {
+
+                x = Math.pow(1 + rate, nper);
+
+                pmt_value = -((rate * (fv + x * pv)) / (-1 + x));
+
+            }
+
+            pmt_value = conv_number(pmt_value, 2);
+
+            return (pmt_value);
+
+        }
+
+        function conv_number(expr, decplaces) { // This function is from David Goodman's Javascript Bible.
+
+            var str = "" + Math.round(eval(expr) * Math.pow(10, decplaces));
+
+            while (str.length <= decplaces) {
+
+                str = "0" + str;
+
+            }
+
+            var decpoint = str.length - decplaces;
+
+            return (str.substring(0, decpoint) + "." + str.substring(decpoint, str.length));
+
+        }
+
+        // Function to calculate future value of an investment..
+
+        function fv(rate, per, nper, pmt, pv) {
+            nper = parseFloat(nper);
+            pmt = parseFloat(pmt);
+            pv = parseFloat(pv);
+            rate = eval((rate) / (per * 100));
+            if ((pmt == 0) || (nper == 0)) {
+                // alert("Why do you want to test me with zeros?");
+                return (0);
+            }
+            if (rate == 0) // Interest rate is 0
+            {
+                fv_value = -(pv + (pmt * nper));
+            }
+            else {
+                x = Math.pow(1 + rate, nper);
+                // y = Math.pow(1 + rate, nper);
+
+                fv_value = - (-pmt + x * pmt + rate * x * pv) / rate;
+
+            }
+
+            fv_value = conv_number(fv_value, 2);
+
+            return (fv_value);
+
+        }
+
+        function conv_number(expr, decplaces) { // This function is from David Goodman's Javascript Bible.
+
+            var str = "" + Math.round(eval(expr) * Math.pow(10, decplaces));
+
+            while (str.length <= decplaces) {
+
+                str = "0" + str;
+
+            }
+
+            var decpoint = str.length - decplaces;
+
+            return (str.substring(0, decpoint) + "." + str.substring(decpoint, str.length));
+
+        }
+
+    </script>
+    <script src="javascripts/TweenMax.min.js"></script>
+    <script src="javascripts/TextPlugin.min.js"></script>
+    <script src="javascripts/main.js"></script>
+
+    <script src="javascripts/control.js" type="text/javascript"></script>
+    <script src="javascripts/moodCalculater.js" type="text/javascript"></script>
+
+
+<script>
+
+        var count = 0;
+        $('input[type="radio"]').click(function () {
+            if ($(this).is(':checked')) {
+                // alert($('input:radio:checked').length);
+                ++count;
+                if (count >= 5 && $('input:radio:checked').length == 5) {
+                    //alert("remoed");
+                    $('.page4 .done').removeAttr('disabled');
+                }
+            }
+        });
+
+        $(document).ready(function () {
+            if(location.search.split('tab=')[1] == '6') {
+                selectTab(6);
+            }
+
+            // Get User Status
+            $.getJSON("user_data", function (data) {
+            }).done(function (data) {
+                loggedIn = data.loggedIn;
+                console.log(data);
+                initializeTabs();
+            });
+
+            $("#dontKnow").click(function() {
+                $(".sub-page4").show();
+            });
+
+            $('.page2 #amount').change(function () {
+                var amount = $('.page2 #amount').val();
+                if(!loggedIn) {
+                    try {
+                        var tempGoals = JSON.parse(sessionStorage.getItem('tempGoals'));
+                        tempGoals.goalAmount = amount;
+                        sessionStorage.setItem('tempGoals', JSON.stringify(tempGoals));
+                        console.log(sessionStorage.getItem("tempGoals"));
+                    } catch (e) {
+                        console.log(e);
+                    }
+                }
+            });
+
+            $('.page2 #time').change(function () {
+                var time = $('.page2 #time').val();
+                if(!loggedIn) {
+                    try{
+                        var tempGoals = JSON.parse(sessionStorage.getItem('tempGoals'));
+                        tempGoals.time = time;
+                        sessionStorage.setItem('tempGoals', JSON.stringify(tempGoals));
+                        console.log(sessionStorage.getItem("tempGoals"));
+                    } catch(e) {
+                        console.log(e);
+                    }
+                }
+            });
+
+
+            var initializeTabs = function () {
+                try {
+                    // debugger;
+                    var tempGoals = JSON.parse(sessionStorage.getItem('tempGoals'));
+                    if (loggedIn && tempGoals.currentPage) {
+                        selectTab(tempGoals.currentPage);
+                        $('.frogImageMoods #setMood').attr('src', tempGoals.mood);
+                        $("#eqAmt, #eqAmt1").html(tempGoals.amt1);
+                        $("#hybAmt, #hybAmt1").html(tempGoals.amt2);
+                        $("#debAmt, #debAmt1").html(tempGoals.amt3);
+                        $("#eqPer, #eqPer1").html(tempGoals.alloc1 + "%");
+                        $("#hybPer, #hybPer1").html(tempGoals.alloc2 + "%");
+                        $("#debPer, #debPer1").html(tempGoals.alloc3 + "%");
+                        $("#invest").html(tempGoals.mn);
+                        $("#invest1").html(tempGoals.mn);
+                        $("#total").html(tempGoals.mn);
+                        $("#total1").html(tempGoals.mn);
+                        $("#total2").html(tempGoals.mn);
+                        $("#invest2").html(tempGoals.mn);
+                        $("#amount").val(tempGoals.goalAmount);
+                        $('#time').val(Number(tempGoals.time));
+                        console.log(JSON.parse(sessionStorage.getItem('sessionStorage')));
+                        // debugger;
+                        // if (tempGoals.riskProfile) {
+                            // showRiskProfile(tempGoals.riskProfile);
+                        $('#riskSelected').html(tempGoals.riskProfile);
+                        // }
+                        $('#Indicator span').css('display', 'inline');
+                        var moodId = tempGoals.moodText;
+                        var local;
+                        local = getGoals(moodId);
+                        // $(".frogImageMoods img").attr("src", "images/" + moodImgName + $imgExtension);
+                        $(".frogImageMoods img").attr("src", tempGoals.mood);
+                        $(".frogImageMoods h1").html("Feeling " + moodId);
+                        $(".below").empty();
+                        for (i = 0; i < local.length; i++) {
+                            $(".below").append("<div class='goal' id=''><img src='images/goals/" + moodId + "/" + local[i] + ".png' mood=" + moodId + " alt='Home view'><p id='mood'><span></span>" + local[i] + "</p></div>");
+                        }
+                        $('p:contains(' + tempGoals.goal + ')').children('span').css('background', 'yellow');
+                        $('span#goalSelected').html(tempGoals.goal);
+                        sessionStorage.removeItem('tempGoals');
+                    }
+
+                } catch (e) {
+                    console.log('no store values');
+                }
+
+            }
+
+
+
+
+
+            //Tab 2 Number validations
+            // $('.page2 #amount').change(function () {
+            //     var x = $('.page2 #amount').val();
+            //     x.replace(/,/g, '');
+            //     x = Number(x);
+            //     if (x < 7000 || x > 10000000) { 
+            //         console.log('number limitation');
+            //     } else if(isNaN(x)) { 
+            //         console.log('isNaN');
+            //     } x=x.toString();
+            //     var lastThree = x.substring(x.length-3);
+            //     var otherNumbers = x.substring(0, x.length - 3); if (otherNumbers != '') lastThree = ',' + lastThree; var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g,",") + lastThree; $('.page2 #amount').val(res);
+            // });
+        });
+
+    </script>
+
+</body>
+
+</html>

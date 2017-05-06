@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin Investory</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/stylesheets/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>  
+<script>
+   
+    </script>
+<body  ng-app="postgreSQL">
+
+    <div id="wrapper" ng-controller="postgreSQLCtrl">
+
+       <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Investory Admin</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                 <!--   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>-->
+                    <ul class="dropdown-menu message-dropdown">
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>Nishant</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-footer">
+                            <a href="#">Read All New Messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                   <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>-->
+                    <ul class="dropdown-menu alert-dropdown">
+                        <li>
+                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Nishant <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="/admin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/admin/uploadcsv"><i class="fa fa-fw fa-bar-chart-o"></i> Upload File to DB</a>
+
+                    </li>
+                    <li class="active">
+                        <a href="/admin/tables"><i class="fa fa-fw fa-table"></i> KYC</a>
+                    </li>
+                     <li>
+                        <a href="/admin/reconcile"><i class="fa fa-fw fa-table"></i> Reconcile</a>
+                    </li>
+                    <li>
+                        <a href="/admin/failedOrders"><i class="fa fa-fw fa-edit"></i> Failed Orders</a>
+                    </li>
+                    <li>
+                        <a href="/admin/reports"><i class="fa fa-fw fa-desktop"></i> Reports</a>
+                    </li>
+                    <!--<li>
+                        <a href="/admin/bootstrap-grid"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="#">Dropdown Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown Item</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/admin/blank-page"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+                    </li>
+                    <li>
+                        <a href="/admin/index-rtl"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+                    </li>
+                --></ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            KYC
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="/">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-table"></i> KYC
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                      
+      
+                    <div class="col-lg-10">
+                        <h2>KYC Pending</h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>User ID</th>
+                                        <th>Name</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                         <th>Ageing</th>
+                                        <th>Remarks</th>
+                                        
+                                        <th>KYC Status</th>
+                                         <th>Actions</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        
+                                       
+                                    <tr ng-repeat="item in dataset track by $index">
+                                         
+                                        <td id="id" name="id" ng-model="id">{{item.userid}}</td>
+                                        <td id="name" name="name" ng-model="name">{{item.name}}</td>
+                                        <td id="mobile" name="mobile" ng-model="mobile">{{item.mobile}}</td>
+                                        <td id="email" name="email" ng-model="email">{{item.email}}</td>  
+                                
+                                         <td id="aging">{{item.ageing}}</td>
+                                       
+                                        <td contenteditable='true' id="remarks" name="remarks" ng-model="remarks"
+                                            ng-change="getremarks(remarks)">{{item.remarks}} </td>
+                                     <td id="status" name="status" ng-model="status">{{item.kycstatus}}</td>  
+                                        <td >
+                                          
+                                      
+                                            
+                                            <div ng-controller="myCtrl">
+
+                                                <select id="selected" name="selected" ng-model="selected" ng-change="showSelectValue(selected)">
+                                                    <option  ng-repeat="statusChanged in status" value="{{statusChanged}}">{{statusChanged}}
+                                                      </option>
+                                                </select>
+
+                                            </div>
+                                                
+                                           
+                                        </td>
+                                              
+                                        <td>
+                                            <button type="botton" class="btn btn-default btn-sm" style="cursor:pointer" ng-click="updateRecord(item.userid)">
+                                                    <span class="glyphicon glyphicon-ok"></span> Ok 
+                                                </button>
+             
+  
+                                        </td>
+                                        
+                                                   
+                                        <td>
+                                            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" ng-click="saveDocId(item.pan,item.userid)"  data-target="#myModal"> Upload</button>
+                                                                                        
+  
+           
+                                            
+                                        </td>
+                      
+          
+      
+         
+                                    </tr>
+                                
+                                      
+                                    
+                                   
+                                </tbody>
+                            </table>
+                   </div>
+                    </div>
+    
+                  </div>
+                  
+        
+    </div>
+        <!-- /.container-fluid -->
+
+              <!-- Modal -->
+   <div class="modal fade" id="myModal" role="dialog" >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> Upload Documents</h4>
+        </div>
+        <div class="modal-body" ng-controller = "myCtrl">
+            <form id=  "uploadForm"
+     enctype   =  "multipart/form-data"
+     action    =  "/admin/api/doc"
+     method    =  "post">
+           
+                  <div class="row">
+      <div class="col-lg-6">
+                    
+            <div class="form-group">      
+<label>Address Proof :</label>
+<input type="file" name="doc" filename="Address" multiple  />
+</div>
+         
+                </div>
+                 <div class="col-lg-6">
+                     <div class="form-group">
+                         <label>ID Proof :</label>
+                                <label>File input</label>
+                                <input type="file" name="doc" filename="Id">
+                            </div>
+                </div>
+                
+           </div>
+                 <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+            <label>Signature Proof :</label> 
+                                <label>File input</label>
+                                <input type="file" name="doc" filename="Signature">
+                            </div>
+                </div>
+                 <div class="col-lg-6">
+                     <div class="form-group">
+            <label>KYC sample video :</label>
+                
+                                <label>File input</label>
+                                <input type="file" name="doc" filename="KYC" >
+                            </div>
+                </div>
+                     
+                 <div class="col-lg-6">
+                     <div class="form-group">
+            <label>Statutory Form:</label>
+                
+                                <label>File input</label>
+                                <input type="file" name="doc" filename="KYC" >
+                            </div>
+                </div>
+                     
+                     
+                 <div class="col-lg-6">
+                     <div class="form-group">
+            <label>BSE Star Application :</label>
+                
+                                <label>File input</label>
+                                <input type="file" name="doc" filename="KYC" >
+                            </div>
+                </div>
+                     
+                     
+                 <div class="col-lg-6">
+                     <div class="form-group">
+            <label>NACH Form :</label>
+                
+                                <label>File input</label>
+                                <input type="file" name="doc" filename="KYC" >
+                            </div>
+                </div>
+                </div>
+           
+        </div>
+        
+        <div class="modal-footer">
+            <input type="submit" class="btn btn-default" name="submit"  value="save">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             
+        </div>
+           
+</form>
+      </div>
+    </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+ <script src="/lib/angular.min.js"></script>
+   <script>
+ 
+       
+          var myApp = angular.module('postgreSQL',[ ]); 
+            
+       myApp.controller('myCtrl', function($scope) {
+    $scope.status = ["Pending", "Approved"];
+  
+});
+       
+   myApp.controller('postgreSQLCtrl', ['$scope' ,'$http',  function($scope,$http) {
+                $scope.val1 = 'This is temp Val' ;  
+                $scope.name = '';
+                $scope.email = '';
+                $scope.mobile = ''; 
+                $scope.selected = '';  
+                $scope.id = '' ;
+                $flag=0;
+                $scope.status='';
+                $scope.saveId='';
+                $scope.remarks='';
+                 
+                $scope.showSelectValue = function(selected)
+                {
+                    $scope.status=selected;
+                  
+                }
+            
+              
+                $scope.getAllRec = function(){ 
+                     $http({method: 'GET', url: '/admin/tables/get'}).
+                        success(function(data, status) { 
+                              $scope.dataset = data;
+                       
+                        }).
+                        error(function(data, status) {
+                          $scope.dataset = data || "Request failed "; 
+                      }); 
+                    }       
+                    /* $http({method: 'GET', url: '/tables/changeStatus'}).
+                        success(function(data, status) { 
+                              $scope.dataset = data;
+                       
+                        }).
+                        error(function(data, status) {
+                          $scope.dataset = data || "Request failed "; 
+                      }); 
+                        */
+                
+                
+            $scope.updateRecord = function(recId)
+                {
+                   // console.log(recId);
+                   if(confirm('update this record ? '))
+                    {  
+                        $http({method: 'GET', url: '/admin/saveChanges?id='+recId+'&selected='+$scope.status}).
+                            success(function(data, status) {  
+                         
+                            });   
+                       
+                        }
+                        $scope.getAllRec();  
+                }
+                  
+                        $scope.getAllRec();
+                
+                   $scope.saveDocId=function(pan,id)
+                  {
+                       
+                  
+                      $scope.saveId=pan;
+                      $http({method: 'GET', url: '/admin/saveId?pan='+pan+'&id='+id}).
+                            success(function(data, status) {  
+                         
+                  });  
+                        
+                 }
+                 
+   
+            }]);
+ 
+        </script>
+        
+ 
+    
+    <!-- jQuery -->
+    <script src="/javascripts/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/javascripts/bootstrap.min.js"></script>
+
+</body>
+
+</html>

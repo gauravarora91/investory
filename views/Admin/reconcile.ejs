@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Investory Admin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Custom CSS -->
+    <link href="/stylesheets/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<!--<script src="dirPagination.js"></script>-->
+  
+
+</head>  
+<script>
+   
+    </script>
+<body  ng-app="postgreSQL">
+
+    <div id="wrapper" ng-controller="postgreSQLCtrl">
+
+       <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Investory Admin</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                   <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>-->
+                    <ul class="dropdown-menu message-dropdown">
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>Nishant</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-footer">
+                            <a href="#">Read All New Messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                   <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>-->
+                    <ul class="dropdown-menu alert-dropdown">
+                        <li>
+                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Nishant <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="/admin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/admin/uploadcsv"><i class="fa fa-fw fa-bar-chart-o"></i> Upload File to DB</a>
+
+                    </li>
+                    <li>
+                        <a href="/admin/tables"><i class="fa fa-fw fa-table"></i> KYC</a>
+                    </li>
+                     <li class="active">
+                        <a href="/admin/reconcile"><i class="fa fa-fw fa-table"></i> Reconcile</a>
+                    </li>
+                    <li>
+                        <a href="/admin/failedOrders"><i class="fa fa-fw fa-edit"></i> Failed Orders</a>
+                    </li>
+                    <li>
+                        <a href="/admin/reports"><i class="fa fa-fw fa-desktop"></i> Reports</a>
+                    </li>
+                   <!-- <li>
+                        <a href="/admin/bootstrap-grid"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="#">Dropdown Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown Item</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/admin/blank-page"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+                    </li>
+                    <li>
+                        <a href="/admin/index-rtl"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+                    </li>
+                --></ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Reconcile
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="/">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-table"></i> Reconcile
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                      
+      
+                    <div class="col-lg-11">
+                        <h2>Reconciliation Pending</h2>
+                       <div class="table-responsive">
+                           
+                            <div ng-controller="checkBoxController">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                 <div class="row">
+                                    
+                                  <div class="col-md-4">
+                                    <label >Search</label>
+                                      
+                                    <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                                         </div>
+                                       <div class="col-md-3 col-md-offset-5">
+                            <div class="push-right">
+                              <button type="button" class="btn btn-default btn-sm" data-toggle="modal" ng-click="getDumpUpdate()"> Reconcile</button>
+                            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" ng-click="statusReconcile()">Update</button> 
+                                </div>
+                                     </div>
+                                                                              </div>
+                                     
+                          
+                            </div>                                   
+                             </div>           
+<!--                             </form>-->
+                                    <tr>
+                                        
+                                        <th>PAN</th>
+                                     <!--<th ng-click="sort('OrderId')">OrderId
+                <span class="glyphicon sort-icon" ng-show="sortKey=='item.userinvestmentorderid'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>-->
+                                         
+                                       <th>  
+                                         <!-- <a href="#" ng-click="sortType = 'OrderId'; sortReverse = !sortReverse">-->
+             Order ID 
+            <!--<span ng-show="sortType == 'OrderId' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'OrderId' && sortReverse" class="fa fa-caret-up"></span>
+</a>--></th>
+                                         
+                                       <th>Customer Name</th>
+                                      <!--  <th>Email</th>-->
+                                        <!--<th>                                             
+         <a href="#" ng-click="sortType = 'SchemeCode'; sortReverse = !sortReverse">
+             SchemeCode 
+        <span ng-show="sortType == 'SchemeCode' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'SchemeCode' && sortReverse" class="fa fa-caret-up"></span>
+                                            </a></th>
+                                        -->     
+                                        <th>Scheme</th>
+                                        <th>Amount</th>
+                                        <th>Ageing</th>
+                                         <th>Status</th>
+                                        
+                                         <th>Folio No</th>
+                                         <th>Transaction Ref</th>
+                                        <th>NAV</th>
+                                        <th>Units</th>
+                                        <th><input type="checkbox" ng-model="selectedAll" ng-click="checkAll(item.userinvestmentorderid)"/> Select All<br/></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        
+                                       
+                                    <tr ng-repeat="item in dataset | orderBy:sortType:sortReverse | filter:search">
+                                   <!--track by $index-->
+                                        <td id="pan" name="pan" ng-model="pan">{{item.userpan}}</td>
+                                        <td type="number" id="orderid" name="orderid" ng-model="orderid">{{item.userinvestmentorderid}}</td>
+                                        <td>{{item.name}}</td>
+                                      <!--  <td>{{item.email}}</td>-->
+                                        
+                                      <!--  <td id="schemecode" name="schemecode" ng-model="schemecode">{{item.schemeid}}</td>-->
+                                        <td>{{item.sname}}</td>
+                                        <td id="amount" name="amount" ng-model="amount">{{item.amount}}</td>  
+                                        
+                                        <td>{{item.ageing}}</td>
+                                        
+                                         <td id="status">{{item.reconcile_status}}</td>
+                                        <td id="foliono">{{item.foliono}}</td>
+                                        <td id="transaction" name="transaction" ng-model="transaction">{{item.bsetxnreference}} </td>
+                                     <td id="nav" name="nav" ng-model="nav">{{item.nav}}</td>  
+                                        <td id="units" name="units" ng-model="units">  {{item.units}}      </td>
+                                              
+                                           <td><!--<input type="checkbox" ng-checked="selectAll" ng-model="item.userinvestmentorderid"/>&nbsp;-->
+                                               
+              	<input id="{{item.userinvestmentorderid}}" type="checkbox" value="{{item.userinvestmentorderid}}"
+                     ng-model="item.Selected"  ng-checked="selection.indexOf(item.userinvestmentorderid) > -1"  ng-click="toggleSelection(item.userinvestmentorderid)" />
+                                               
+          </td>
+      
+         
+                                    </tr>
+                                
+                                     
+                                    
+                                   
+                                </tbody>
+                            </table>
+       
+                            </div> </div>
+                    </div>
+    
+                  </div>
+                  
+        
+    </div>
+        <!-- /.container-fluid -->
+
+      
+        <!-- /#page-wrapper -->
+
+ <script src="/lib/angular.min.js"></script>
+   <script>
+ 
+         
+           var myReconcile = angular.module('postgreSQL',[]); 
+       
+       
+        
+       var idArray,flag;
+       myReconcile.value('idArray', 0);
+       
+       var datasets;
+       myReconcile.value('datasets', 0);
+       
+        myReconcile.controller('checkBoxController', function ($scope) {
+	
+            
+       
+            
+	    
+            $scope.checkAll = function () {
+                console.log("Check all");
+        if ($scope.selectedAll) 
+          {
+               $scope.selectedAll = true;
+               $scope.selectionAll=[];
+               flag=1;
+             
+        } else {
+            $scope.selectedAll = false;
+             $scope.selectionAll=[];
+            flag=0;
+        }
+        angular.forEach($scope.dataset, function (dataset) {
+            dataset.Selected = $scope.selectedAll;
+            if(flag==1){
+            
+            $scope.selectionAll.push(dataset.userinvestmentorderid);
+            }
+        });
+            
+            idArray= $scope.selectionAll;
+            console.log(idArray);
+
+    };
+		// toggle selection for a given employee by name
+		$scope.toggleSelection = function toggleSelection(id) {
+	    //console.log(id);
+            //console.log($scope.selection);
+            var idx = $scope.selection.indexOf(id);
+
+	    // is currently selected
+	    if (idx > -1) {
+	      $scope.selection.splice(idx, 1);
+	    }
+
+	    // is newly selected
+	    else {
+	      $scope.selection.push(id);
+	    }
+          
+         idArray=$scope.selection;
+        //  console.log($rootScope.idArray);
+              
+          
+	  };
+    
+     /*$scope.sort = function(keyname){
+         console.log("sort");
+        $scope.sortKey = keyname;   //set the sortKey to the param passed
+        $scope.reverse = !$scope.reverse; //if true make it false and vice versa
+         
+    };*/
+   
+        });
+
+      
+
+
+
+
+ 
+
+   myReconcile.controller('postgreSQLCtrl', ['$scope','$http',  function($scope,$http) {
+                $scope.val1 = 'This is temp Val' ;  
+                $scope.pan = '';
+                $scope.orderid = '';
+                $scope.schemecode = ''; 
+                $scope.amount = '';  
+                $scope.status = '' ;
+                $flag=0;
+                $scope.transaction='';
+                $scope.nav='';
+                $scope.units='';
+                $scope.foliono='';
+    
+       $scope.selectionAll=[];
+         $scope.selection=[];
+            
+
+                //Get all records function
+                $scope.getAllRec = function(){ 
+                     $http({method: 'GET', url: '/admin/reconcile/get'}).
+                        success(function(data, status) { 
+                        
+                              
+                          angular.forEach($scope.data, function (data) {
+                        data.userinvestmentorderid = parseInt(data.userinvestmentorderid);
+                        }); 
+                            $scope.dataset = data;
+                          datasets=$scope.dataset ;
+                         
+                    
+                        }).
+                        error(function(data, status) {
+                          $scope.dataset = data || "Request failed "; 
+                      }); 
+                     
+                    }       
+                
+                   //check box update function
+                  $scope.getDumpUpdate=function(){
+                      console.log(idArray); 
+                      $http({method:'GET', url:'/admin/getDumpUpdates?'+$.param({id: idArray})}).
+                      success(function(data,status){
+                            
+                        });  
+                        $scope.getAllRec();  
+                       }
+                  $scope.getAllRec();
+                  //update status as reconcile
+                  $scope.statusReconcile=function(){
+                      $http({method:'GET',url:'/admin/setReconcileAsStatus?'+$.param({id:idArray})}).
+                      success(function(data,status)
+                               {          
+                      });
+                      $scope.getAllRec();
+                  }
+                  $scope.getAllRec();
+   
+            }]);
+            
+       
+       
+ 
+        </script>
+        
+ 
+    
+    <!-- jQuery -->
+    <script src="/javascripts/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/javascripts/bootstrap.min.js"></script>
+
+</body>
+
+</html>
